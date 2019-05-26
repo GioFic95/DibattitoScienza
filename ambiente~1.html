@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>Dibattito Scienza</title> 
+  <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;border-color:#9ABAD9;}
+        .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#9ABAD9;color:#444;background-color:#EBF5FF;}
+        .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#9ABAD9;color:#fff;background-color:#409cff;cursor: pointer;}
+        .tg .tg-phtq{background-color:#D2E4FC;border-color:inherit;text-align:left;vertical-align:top}
+        .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+    </style> 
+  <script>
+        window.onload=function() {
+            const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
+
+            const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
+                    v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+            )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+
+            // do the work...
+            document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
+                const table = th.closest('table');
+                console.log(table.querySelectorAll("tbody:nth-child(n+2) tr"));
+                Array.from(table.querySelectorAll('tbody:nth-child(n+2) tr'))
+                    .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
+                    .forEach(tr => {
+                        const tbody = document.createElement("tbody");
+                        tbody.appendChild(tr);
+                        table.appendChild(tbody)
+                    });
+            })));
+        }
+    </script> 
+ </head> 
+ <body> 
+  <h1>Dibattito Scienza</h1> 
+  <h2>Click on the column headers to sort the rows.</h2> 
+  <h2>Clicca sulle intestazioni delle colonne per ordinare le righe.</h2> 
+  <table class="tg" id="my-table"> 
+   <tbody>
+    <tr> 
+     <th class="tg-0pky">TweetID 👈</th> 
+     <th class="tg-0pky">UserName 👈</th> 
+     <th class="tg-0pky">InReplyID 👈</th> 
+     <th class="tg-0pky">RetweetId 👈</th> 
+     <th class="tg-0pky">DateTime 👈</th> 
+     <th class="tg-0pky">Url 👈</th> 
+     <!-- <th class="tg-0pky">Topic 👈</th> --> 
+     <th class="tg-0pky">Text 👈</th> 
+    </tr> 
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1125754757405118464</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-07 15:30:24.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1125754757405118464">https://twitter.com/FronteVerde/status/1125754757405118464</a></td> 
+     <td class="tg-phtq">#rifiuti #ambiente #fronteverde https://t.co/ST6t7Afb5e</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131077724242698240</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1131055766717247490</td> 
+     <td class="tg-0pky">2019-05-22 08:01:58.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/SI_sinistra/status/1131077724242698240">https://twitter.com/SI_sinistra/status/1131077724242698240</a></td> 
+     <td class="tg-phtq">RT @SIromaXII: #Ambiente https://t.co/VMF1xis6jH</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1127516890945982466</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1127511104089985024</td> 
+     <td class="tg-0pky">2019-05-12 12:12:29.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/SI_sinistra/status/1127516890945982466">https://twitter.com/SI_sinistra/status/1127516890945982466</a></td> 
+     <td class="tg-phtq">RT @MaurizioNatale5: #laSinistra #Ambiente https://t.co/29Bey9wheJ</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1113167151542800386</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-02 21:51:45.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1113167151542800386">https://twitter.com/FronteVerde/status/1113167151542800386</a></td> 
+     <td class="tg-phtq">gretathunberg #fronteverde #salvailfuturo #nobel #ambiente #cambiamenticlimatici #fridaysforfuture 🌍 https://t.co/fZ6qGBm4HR</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1119214024338616320</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-19 14:19:52.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1119214024338616320">https://twitter.com/FronteVerde/status/1119214024338616320</a></td> 
+     <td class="tg-phtq">E' nata Keyra, unica piccola ocelot d'Italia - Ambiente &amp; Energia https://t.co/HiguvHOJoV</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1104719072028180480</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-03-10 13:22:06.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1104719072028180480">https://twitter.com/FronteVerde/status/1104719072028180480</a></td> 
+     <td class="tg-phtq">Da domani l'Assemblea dell'Onu per salvare l'ambiente - Ambiente &amp; Energia https://t.co/96LkD2BxX7</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1130510854913445888</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1130510591666401282</td> 
+     <td class="tg-0pky">2019-05-20 18:29:26.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/SI_sinistra/status/1130510854913445888">https://twitter.com/SI_sinistra/status/1130510854913445888</a></td> 
+     <td class="tg-phtq">RT @MarcoBaggioli: #Diritti #lavoro #ambiente Stato Sociale cioè ........... #LaSinistra ! https://t.co/l9FiX5iuh3</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1123972642573377537</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-02 17:28:55.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FratellidItaIia/status/1123972642573377537">https://twitter.com/FratellidItaIia/status/1123972642573377537</a></td> 
+     <td class="tg-phtq">Ambiente, Rizzetto: Necessario ricambio parco&nbsp;veicoli https://t.co/WWFXdJ5DXm https://t.co/XiTsjc86fv</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1112983039439761410</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-02 09:40:09.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1112983039439761410">https://twitter.com/FronteVerde/status/1112983039439761410</a></td> 
+     <td class="tg-phtq">Nuovo Piano lupo, esclusi gli abbattimenti controllati - Ambiente &amp; Energia https://t.co/HNjUrnUfjC</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1101553741470281728</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-03-01 19:44:12.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1101553741470281728">https://twitter.com/FronteVerde/status/1101553741470281728</a></td> 
+     <td class="tg-phtq">Economia circolare, l'Italia è la prima in Europa - Ambiente &amp; Energia https://t.co/CeG2S7Ugqu</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1122715415401070592</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-29 06:13:08.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1122715415401070592">https://twitter.com/FronteVerde/status/1122715415401070592</a></td> 
+     <td class="tg-phtq">La plastica usata ora finisce nel sudest asiatico - Ambiente &amp; Energia https://t.co/G9He5q798J</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1120582782110109696</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-23 08:58:49.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1120582782110109696">https://twitter.com/FronteVerde/status/1120582782110109696</a></td> 
+     <td class="tg-phtq">Trovate le 'forbici molecolari' per distruggere la plastica - Ambiente &amp; Energia https://t.co/8GkvKeP8cq</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1120355992896667649</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-22 17:57:38.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1120355992896667649">https://twitter.com/FronteVerde/status/1120355992896667649</a></td> 
+     <td class="tg-phtq">Uccisi 197 attivisti ambientalisti nel mondo nel 2017 - Ambiente &amp; Energia https://t.co/9ckRPlf7m6</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1089275722248671232</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-01-26 22:35:44.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1089275722248671232">https://twitter.com/FronteVerde/status/1089275722248671232</a></td> 
+     <td class="tg-phtq">La Germania verso l'addio al carbone nel 2038 - Ambiente &amp; Energia https://t.co/z7CkqI8DKz</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1104401711093960710</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-03-09 16:21:01.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1104401711093960710">https://twitter.com/FronteVerde/status/1104401711093960710</a></td> 
+     <td class="tg-phtq">Più verde e un arredo urbano colorato aumenta felicità - Ambiente &amp; Energia https://t.co/bVr9AZG0Nc</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1087727923778519040</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-01-22 16:05:20.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1087727923778519040">https://twitter.com/FronteVerde/status/1087727923778519040</a></td> 
+     <td class="tg-phtq">L'inquinamento non diminuisce solo la salute, anche la felicità - Ambiente &amp; Energia https://t.co/Qpia7KtzxH</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1123962129252536321</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1123933644123516934</td> 
+     <td class="tg-0pky">2019-05-02 16:47:08.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/europaverde_it/status/1123962129252536321">https://twitter.com/europaverde_it/status/1123962129252536321</a></td> 
+     <td class="tg-phtq">RT @VivianaValastro: @ShineAngelic @_MarcoV_ @PossibileIt @europeangreens @yes_political Fisco e ambiente strettamente collegate. Ecco come…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1084232206220959744</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-01-13 00:34:36.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1084232206220959744">https://twitter.com/FronteVerde/status/1084232206220959744</a></td> 
+     <td class="tg-phtq">Riscaldamento oceani come una bomba di Hiroshima al secondo - Ambiente &amp; Energia https://t.co/2wMngS62hD</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1082910866209755136</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-01-09 09:04:04.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1082910866209755136">https://twitter.com/FronteVerde/status/1082910866209755136</a></td> 
+     <td class="tg-phtq">Sahara, da deserto in distesa verde ogni 20.000 anni - Ambiente &amp; Energia https://t.co/R2s9TknW57</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1107627643158102016</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-03-18 13:59:43.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1107627643158102016">https://twitter.com/FronteVerde/status/1107627643158102016</a></td> 
+     <td class="tg-phtq">Con biometano e idrogeno taglio CO2 e risparmio 217 mld anno - Ambiente &amp; Energia https://t.co/zpSiorBgiw</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1100415441971798017</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-02-26 16:21:00.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1100415441971798017">https://twitter.com/FronteVerde/status/1100415441971798017</a></td> 
+     <td class="tg-phtq">Wwf, entro prossimi 35 anni a rischio il 30% orsi polari - Ambiente &amp; Energia https://t.co/pzNBMt96Ds</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1086404341282549762</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-01-19 00:25:54.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1086404341282549762">https://twitter.com/FronteVerde/status/1086404341282549762</a></td> 
+     <td class="tg-phtq">Sub faccia a faccia con squalo bianco gigante, "è Deep Blue" - Ambiente &amp; Energia https://t.co/X0yT2BxBXA</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1080601206454738944</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-01-03 00:06:18.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1080601206454738944">https://twitter.com/FronteVerde/status/1080601206454738944</a></td> 
+     <td class="tg-phtq">Noaa, in Europa il 2018 è l'anno più caldo mai registrato - Ambiente &amp; Energia https://t.co/OZmPAw8cME</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1118901026642386948</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-18 17:36:07.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1118901026642386948">https://twitter.com/FronteVerde/status/1118901026642386948</a></td> 
+     <td class="tg-phtq">Onu, è tsunami rifiuti elettronici, prodotti 50 milioni di tonnellate l'anno - Ambiente &amp; Energia https://t.co/eub2kXjdah</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1102592085675466752</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-03-04 16:30:13.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1102592085675466752">https://twitter.com/FronteVerde/status/1102592085675466752</a></td> 
+     <td class="tg-phtq">Aderisci anche tu al Fronte Verde ecologisti indipendenti #salvailfuturo https://t.co/nJyE89xdA4 #ambiente… https://t.co/nfEVVDtY15</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1130753821276278784</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1130753309210566656</td> 
+     <td class="tg-0pky">2019-05-21 10:34:54.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/SI_sinistra/status/1130753821276278784">https://twitter.com/SI_sinistra/status/1130753821276278784</a></td> 
+     <td class="tg-phtq">RT @RaiStudio24: Nicola Fratoianni @NFratoianni (@SinistraUe) a #Studio24 su #ElezioniEuropee2019 #ambiente: gli attuali incentivi ai combu…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1128661459813195776</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-15 16:00:36.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/pdnetwork/status/1128661459813195776">https://twitter.com/pdnetwork/status/1128661459813195776</a></td> 
+     <td class="tg-phtq">Presentato il ‘Piano per l’Italia’, le proposte del @pdnetwork su #lavoro #ambiente #sviluppo #istruzione… https://t.co/DcW1k44RpR</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1130915261031342083</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1130911301323100160</td> 
+     <td class="tg-0pky">2019-05-21 21:16:24.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Mov5Stelle/status/1130915261031342083">https://twitter.com/Mov5Stelle/status/1130915261031342083</a></td> 
+     <td class="tg-phtq">RT @Ale_ToddeM5S: Concordo con @SergioCosta_min: #Economia e #Ambiente devono viaggiare sullo stesso binario. Significa nuovi posti di lavo…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1129443584137203713</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-17 19:48:29.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/SI_sinistra/status/1129443584137203713">https://twitter.com/SI_sinistra/status/1129443584137203713</a></td> 
+     <td class="tg-phtq">#lasinistra per una rivoluzione #green da fare in Italia e in Europa. #ambiente #climatechange #FridayForFuture https://t.co/MSAhsaRtwn</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1122859362140282886</td> 
+     <td class="tg-phtq">Piu_Europa</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1122848296236650497</td> 
+     <td class="tg-0pky">2019-04-29 15:45:08.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Piu_Europa/status/1122859362140282886">https://twitter.com/Piu_Europa/status/1122859362140282886</a></td> 
+     <td class="tg-phtq">RT @CostHermanin: A cosa serve inserire in #Costituzione - principio sostenibilità - equità tra generazioni - diritto a tutela ambiente? A…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1118769645996118016</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-18 08:54:03.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FratellidItaIia/status/1118769645996118016">https://twitter.com/FratellidItaIia/status/1118769645996118016</a></td> 
+     <td class="tg-phtq">#Meloni: "#Fratelliditalia partito di #centrodestra con il programma più articolato sul tema dell'#ambiente, è una… https://t.co/CeKTolTmbs</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1081947256088076288</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-01-06 17:15:02.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FronteVerde/status/1081947256088076288">https://twitter.com/FronteVerde/status/1081947256088076288</a></td> 
+     <td class="tg-phtq">Mise avvia iter per lo stop a 7 permessi per le trivelle in mare - Ambiente &amp; Energia https://t.co/DSlW8MDYAH</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1096418235510124550</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1096410343818084352</td> 
+     <td class="tg-0pky">2019-02-15 15:37:32.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Mov5Stelle/status/1096418235510124550">https://twitter.com/Mov5Stelle/status/1096418235510124550</a></td> 
+     <td class="tg-phtq">RT @ConnyGiordano_5: Orgogliosa dei contenuti che stanno prendendo forma nel manifesto per le elezioni #UE: salute, ambiente, giustizia soc…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1130474964484788224</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1130474818976014337</td> 
+     <td class="tg-0pky">2019-05-20 16:06:49.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/europaverde_it/status/1130474964484788224">https://twitter.com/europaverde_it/status/1130474964484788224</a></td> 
+     <td class="tg-phtq">RT @Annuskaia: L'Italia dichiari subito l'#EmergenzaClimatica il nostro ambiente è un bene prezioso, non possiamo continuare a distrugger…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1123169550005096448</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-30 12:17:42.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/europaverde_it/status/1123169550005096448">https://twitter.com/europaverde_it/status/1123169550005096448</a></td> 
+     <td class="tg-phtq">#EuropaVerde non slegherà il tema dell'#ambiente dall'#economia, dai #diritti sociali, dalle #disuguaglianze. C'è u… https://t.co/xOZlRiW78q</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1123169775423774720</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-30 12:18:36.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/europaverde_it/status/1123169775423774720">https://twitter.com/europaverde_it/status/1123169775423774720</a></td> 
+     <td class="tg-phtq">"La tutela dell'#ambiente non è slegato da #economia, #dirittisociali, #lavoro, #immigrazione. L'ambiente è il fil… https://t.co/PPrNCq0Ehw</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1122581832145494016</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1122581319819644929</td> 
+     <td class="tg-0pky">2019-04-28 21:22:20.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/forza_italia/status/1122581832145494016">https://twitter.com/forza_italia/status/1122581832145494016</a></td> 
+     <td class="tg-phtq">RT @Antonio_Tajani: Invece di parlare di disoccupazione, infrastrutture, sicurezza e ambiente si parla delle beghe interne al governo. Gli…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1113445746282573824</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1113445706528952320</td> 
+     <td class="tg-0pky">2019-04-03 16:18:47.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Mov5Stelle/status/1113445746282573824">https://twitter.com/Mov5Stelle/status/1113445746282573824</a></td> 
+     <td class="tg-phtq">RT @M5S_Camera: In Italia 90mila persone muoiono ogni anno per l’inquinamento atmosferico. La commissione Ambiente della Camera ha approvat…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1118771954461417472</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-18 09:03:14.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FratellidItaIia/status/1118771954461417472">https://twitter.com/FratellidItaIia/status/1118771954461417472</a></td> 
+     <td class="tg-phtq">#Meloni: "Sono molto sensibile ai temi dell'#ambiente. Potrebbe esserci manipolazione su #Greta Thunberg, ma in un… https://t.co/bSwut0SoYA</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1106187957269090304</td> 
+     <td class="tg-phtq">PartitComunista</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-03-14 14:38:55.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/PartitComunista/status/1106187957269090304">https://twitter.com/PartitComunista/status/1106187957269090304</a></td> 
+     <td class="tg-phtq">Il capitalismo è incompatibile col futuro dell'umanità. La difesa dell'#ambiente è parte della lotta contro questo… https://t.co/dqj1LAwHza</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131937061664100352</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1131935382948290562</td> 
+     <td class="tg-0pky">2019-05-24 16:56:40.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/europaverde_it/status/1131937061664100352">https://twitter.com/europaverde_it/status/1131937061664100352</a></td> 
+     <td class="tg-phtq">RT @monicafrassoni: Per chi pensa che ci occupiamo solo di ambiente ricordiamo che non c'è giustizia sociale senza giustizia ambientale. #…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1127211836980563968</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-11 16:00:19.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/europaverde_it/status/1127211836980563968">https://twitter.com/europaverde_it/status/1127211836980563968</a></td> 
+     <td class="tg-phtq">"Con questo progetto politico, ci proponiamo di abbracciare l' #ambiente nella sua accezione più ampia: #salute, qu… https://t.co/WusnJWkMpT</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1116031505434914816</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1116020033434660864</td> 
+     <td class="tg-0pky">2019-04-10 19:33:40.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/forza_italia/status/1116031505434914816">https://twitter.com/forza_italia/status/1116031505434914816</a></td> 
+     <td class="tg-phtq">RT @Vincenza_Lab: #Ambiente #Ilva #ExIlva #ArcelorMittal A #Taranto la realtà supera qualsiasi monitoraggio😤 se per Clini le incidenze tumo…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131958986947923968</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1131936863554605056</td> 
+     <td class="tg-0pky">2019-05-24 18:23:47.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/SI_sinistra/status/1131958986947923968">https://twitter.com/SI_sinistra/status/1131958986947923968</a></td> 
+     <td class="tg-phtq">RT @GiovanniDeLuci7: #pace #lavoro #Ambiente #DirittiCivili penso che si possa ripartire da qui per cercare di cambiare #Italia ed #Europa…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1090661138407268353</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1090637882245603328</td> 
+     <td class="tg-0pky">2019-01-30 18:20:53.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Mov5Stelle/status/1090661138407268353">https://twitter.com/Mov5Stelle/status/1090661138407268353</a></td> 
+     <td class="tg-phtq">RT @MaraiaGeneroso1: #AcquaPubblica. Dopo anni durante i quali la volontà popolare è stata ignorata, oggi la Commissione #Ambiente ha scelt…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1090667019954016263</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1090662462788124672</td> 
+     <td class="tg-0pky">2019-01-30 18:44:15.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Mov5Stelle/status/1090667019954016263">https://twitter.com/Mov5Stelle/status/1090667019954016263</a></td> 
+     <td class="tg-phtq">RT @mariaederaM5S: Ottime notizie: la Commissione Ambiente ha votato per presentare alla Camera la proposta di legge sull' #acquapubblica a…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1090233097386262530</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-01-29 14:00:00.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Mov5Stelle/status/1090233097386262530">https://twitter.com/Mov5Stelle/status/1090233097386262530</a></td> 
+     <td class="tg-phtq">C'è tempo fino alle 19 per votare le proposte di questo mese sul tema Ambiente su #Rousseau https://t.co/YFwjEDgb6w</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131314187546910720</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1131250274780221440</td> 
+     <td class="tg-0pky">2019-05-22 23:41:35.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/forza_italia/status/1131314187546910720">https://twitter.com/forza_italia/status/1131314187546910720</a></td> 
+     <td class="tg-phtq">RT @Vincenza_Lab: #climatechange #clima #ambiente dal Governo gialloverde ha fatto poco e nulla. Il #26maggio con il voto alle #ElezioniEur…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1106528285821939712</td> 
+     <td class="tg-phtq">Piu_Europa</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1106513534920347648</td> 
+     <td class="tg-0pky">2019-03-15 13:11:16.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Piu_Europa/status/1106528285821939712">https://twitter.com/Piu_Europa/status/1106528285821939712</a></td> 
+     <td class="tg-phtq">RT @riccardomagi: Buon #FridaysForFuture! 🌱 Oggi è il venerdì del #ClimateStrike per l'#ambiente nato dalle parole della giovane attivista…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1127517089802149889</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1127513144077766656</td> 
+     <td class="tg-0pky">2019-05-12 12:13:17.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/SI_sinistra/status/1127517089802149889">https://twitter.com/SI_sinistra/status/1127517089802149889</a></td> 
+     <td class="tg-phtq">RT @SinistraUe: Abbiamo a cuore il Pianeta, e le persone. Ambientalisti e contro le destre. #lasinistra #ecologisti #ambiente https://t.c…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131213129986109447</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-22 17:00:01.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/pdnetwork/status/1131213129986109447">https://twitter.com/pdnetwork/status/1131213129986109447</a></td> 
+     <td class="tg-phtq">È compito di tutti noi proteggere l'#ambiente e realizzare un modello di #svilupposostenibile . Le proposte del… https://t.co/SlPoROQNzb</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131531989016879105</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-23 14:07:03.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FratellidItaIia/status/1131531989016879105">https://twitter.com/FratellidItaIia/status/1131531989016879105</a></td> 
+     <td class="tg-phtq">Ambiente, flash mob di Fratelli d’Italia a Roma. Meloni: Tema che FdI porterà in&nbsp;Europa https://t.co/aD1gq1m3Tl https://t.co/ieDHIL4XPO</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1105515189452058624</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1105514100203941889</td> 
+     <td class="tg-0pky">2019-03-12 18:05:35.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Mov5Stelle/status/1105515189452058624">https://twitter.com/Mov5Stelle/status/1105515189452058624</a></td> 
+     <td class="tg-phtq">RT @NicolaProvenza: Scienza, ambiente e salute da oggi grazie alla Rete nazionale per il registro tumori e al Referto epidemiologico, vengo…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1090646570989748225</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1090645758267850752</td> 
+     <td class="tg-0pky">2019-01-30 17:23:00.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Mov5Stelle/status/1090646570989748225">https://twitter.com/Mov5Stelle/status/1090646570989748225</a></td> 
+     <td class="tg-phtq">RT @ZolezziAlberto: In commissione ambiente Camera abbiamo deciso che si va avanti con la nostra proposta di legge su #acquapubblica. Bolle…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1130416773499674624</td> 
+     <td class="tg-phtq">Piu_Europa</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-20 12:15:35.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Piu_Europa/status/1130416773499674624">https://twitter.com/Piu_Europa/status/1130416773499674624</a></td> 
+     <td class="tg-phtq">"Il lavoro lo procura l’impresa, non lo Stato, che deve invece creare un ambiente favorevole per gli investimenti".… https://t.co/Rnc3J43UT5</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1127522533039910918</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1127519464856092672</td> 
+     <td class="tg-0pky">2019-05-12 12:34:54.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/SI_sinistra/status/1127522533039910918">https://twitter.com/SI_sinistra/status/1127522533039910918</a></td> 
+     <td class="tg-phtq">RT @SalexMeri: @NichiVendola Il #26Maggio voterò #LaSinistra perché la battaglia su #Ecologia e #Ambiente non può e non deve essere fatta…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1124278864585293824</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-03 13:45:44.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Mov5Stelle/status/1124278864585293824">https://twitter.com/Mov5Stelle/status/1124278864585293824</a></td> 
+     <td class="tg-phtq">Ambiente, salute, giustizia, lavoro, lotta a sprechi e privilegi: sono tanti i fronti su cui il @Mov5Stelle combatt… https://t.co/MsNK3zPEz2</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1090661228425428993</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1090640001950457860</td> 
+     <td class="tg-0pky">2019-01-30 18:21:15.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Mov5Stelle/status/1090661228425428993">https://twitter.com/Mov5Stelle/status/1090661228425428993</a></td> 
+     <td class="tg-phtq">RT @PatriziaTerzoni: AVANTI con l'#AcquaPubblica! La commissione Ambiente ha deciso che la Camera esaminerà il testo del Movimento 5 Stelle…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1090675753119895553</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1090673441525649408</td> 
+     <td class="tg-0pky">2019-01-30 19:18:57.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Mov5Stelle/status/1090675753119895553">https://twitter.com/Mov5Stelle/status/1090675753119895553</a></td> 
+     <td class="tg-phtq">RT @VianelloGio: Oggi abbiamo votato in Commissione Ambiente alla Camera, il testo base della proposta di Legge sull’Acqua Pubblica. E’ que…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131927833603973127</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-24 16:20:00.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/europaverde_it/status/1131927833603973127">https://twitter.com/europaverde_it/status/1131927833603973127</a></td> 
+     <td class="tg-phtq">Per chi pensa che ci occupiamo solo di ambiente ricordiamo che non c'è giustizia sociale senza giustizia ambientale… https://t.co/CYUdx2YVRH</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1124251743217508352</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-03 11:57:57.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/europaverde_it/status/1124251743217508352">https://twitter.com/europaverde_it/status/1124251743217508352</a></td> 
+     <td class="tg-phtq">“#Salute e #ambiente: la nostra regione registra il primato per la più alta percentuale di malattie professionali n… https://t.co/AuqjFT76zC</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1123144433120182273</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-30 10:37:54.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/europaverde_it/status/1123144433120182273">https://twitter.com/europaverde_it/status/1123144433120182273</a></td> 
+     <td class="tg-phtq">La tutela dell'#ambiente non è scollegata dai temi del #lavoro e dello #sviluppo. Ricordiamoci che l'Italia, nonost… https://t.co/TZMUOZPNl2</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1121760744440238080</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-26 14:59:37.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/europaverde_it/status/1121760744440238080">https://twitter.com/europaverde_it/status/1121760744440238080</a></td> 
+     <td class="tg-phtq">Un'alternativa al tunnel che sia ecologista, efficace da subito e che rispetti l'#ambiente, con il potenziamento de… https://t.co/egJrtBobeC</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1106482661860741120</td> 
+     <td class="tg-phtq">Piu_Europa</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-03-15 10:09:58.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Piu_Europa/status/1106482661860741120">https://twitter.com/Piu_Europa/status/1106482661860741120</a></td> 
+     <td class="tg-phtq">Lottare per #clima e #ambiente non vuol dire desiderare decrescita felice. Al contrario, è guardare avanti: unire p… https://t.co/vf2K2srAaq</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1118582170791108608</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1118572665487482880</td> 
+     <td class="tg-0pky">2019-04-17 20:29:06.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Mov5Stelle/status/1118582170791108608">https://twitter.com/Mov5Stelle/status/1118582170791108608</a></td> 
+     <td class="tg-phtq">RT @ilariafontana5s: Questa è la classifica dei gruppi politici e dei partiti italiani “difensori” di Ambiente e Clima in Europa e indovina…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1106607545983094784</td> 
+     <td class="tg-phtq">PartitComunista</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1106570444583383040</td> 
+     <td class="tg-0pky">2019-03-15 18:26:13.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/PartitComunista/status/1106607545983094784">https://twitter.com/PartitComunista/status/1106607545983094784</a></td> 
+     <td class="tg-phtq">RT @fgc_nazionale: La lotta l’#ambiente è inscindibile dalla critica a un sistema che nel nome del profitto di pochissimi genera devastazio…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131937396382212096</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-24 16:58:00.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/europaverde_it/status/1131937396382212096">https://twitter.com/europaverde_it/status/1131937396382212096</a></td> 
+     <td class="tg-phtq">Perché il nostro obiettivo è lavorare per tutti, persone, ambiente, animali e dire basta alle campagna d’odio e di… https://t.co/U3Q2ZH1JlA</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1129040210732494848</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1129006542169227264</td> 
+     <td class="tg-0pky">2019-05-16 17:05:37.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/SI_sinistra/status/1129040210732494848">https://twitter.com/SI_sinistra/status/1129040210732494848</a></td> 
+     <td class="tg-phtq">RT @PetrisDe: La difesa dell’#ambiente non è una medaglietta da tirare fuori in campagna elettorale. Come #SinistraItaliana siamo stati a S…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1127262924320456704</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-11 19:23:19.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/pdnetwork/status/1127262924320456704">https://twitter.com/pdnetwork/status/1127262924320456704</a></td> 
+     <td class="tg-phtq">"Tutti insieme possiamo e dobbiamo affrontare i grandi temi per le sfide che ci attendono: quelle dell'#ambiente, i… https://t.co/RyzUSJjRJW</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1088406086695223297</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1088404958163148802</td> 
+     <td class="tg-0pky">2019-01-24 13:00:07.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Mov5Stelle/status/1088406086695223297">https://twitter.com/Mov5Stelle/status/1088406086695223297</a></td> 
+     <td class="tg-phtq">RT @PaoloParentela: Il futuro di questo Paese è sulle fonti rinnovabili, che creano posti di #lavoro e tutelano l’#ambiente. Scoraggiamo ch…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1129815800154611713</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-18 20:27:32.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/europaverde_it/status/1129815800154611713">https://twitter.com/europaverde_it/status/1129815800154611713</a></td> 
+     <td class="tg-phtq">Una delle nostre #12Priorità è l' #Ambiente. Combattere i cambiamenti climatici è la sfida del 21°secolo. Le rispos… https://t.co/jpe2pXgs3Q</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1118803253691547648</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1118794164693499904</td> 
+     <td class="tg-0pky">2019-04-18 11:07:36.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/pdnetwork/status/1118803253691547648">https://twitter.com/pdnetwork/status/1118803253691547648</a></td> 
+     <td class="tg-phtq">RT @bragachiara: Sul #Def in Comm Ambiente e Infrastrutture il silenzio assordante di #Lega #M5S e Governo e nessuna indicazione su rilanci…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1120999944637296641</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1120992286891028486</td> 
+     <td class="tg-0pky">2019-04-24 12:36:28.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Mov5Stelle/status/1120999944637296641">https://twitter.com/Mov5Stelle/status/1120999944637296641</a></td> 
+     <td class="tg-phtq">RT @AzzolinaLucia: Un sottosegretario indagato per corruzione. Un'inchiesta che coinvolge ambienti mafiosi. Magistrati che avvertono: difen…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1118524533860859905</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1118523855889420293</td> 
+     <td class="tg-0pky">2019-04-17 16:40:04.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Mov5Stelle/status/1118524533860859905">https://twitter.com/Mov5Stelle/status/1118524533860859905</a></td> 
+     <td class="tg-phtq">RT @ilariafontana5s: Siamo da sempre difensori di clima e ambiente. Oggi ce lo riconosce anche il Climate Action network, che mette le altr…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1090654743154835456</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1090654453764710401</td> 
+     <td class="tg-0pky">2019-01-30 17:55:28.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Mov5Stelle/status/1090654743154835456">https://twitter.com/Mov5Stelle/status/1090654743154835456</a></td> 
+     <td class="tg-phtq">RT @F_DUva: La Commissione Ambiente ha votato la proposta di legge del @Mov5Stelle come testo base per la discussione in Aula alla Camera.…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1113817624285204481</td> 
+     <td class="tg-phtq">PartSocialista</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1113755172113661952</td> 
+     <td class="tg-0pky">2019-04-04 16:56:30.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/PartSocialista/status/1113817624285204481">https://twitter.com/PartSocialista/status/1113817624285204481</a></td> 
+     <td class="tg-phtq">RT @NenciniPsi: La mia ultima opera - 'La bellezza' - è tra i finalisti del Premio Acqui Ambiente. Gira voce sia il premio letterario ambie…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1128696462521638915</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1128694768228360192</td> 
+     <td class="tg-0pky">2019-05-15 18:19:41.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/pdnetwork/status/1128696462521638915">https://twitter.com/pdnetwork/status/1128696462521638915</a></td> 
+     <td class="tg-phtq">RT @LiaQuartapelle: C’è chi con le proprie dichiarazioni fa aumentare lo spread e chi presenta un piano per l’Italia fatto di ambiente, lav…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1120318281456529408</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-22 15:27:47.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/FratellidItaIia/status/1120318281456529408">https://twitter.com/FratellidItaIia/status/1120318281456529408</a></td> 
+     <td class="tg-phtq">Non si può essere dei patrioti senza difendere la natura. Patria (terra dei padri) e Ambiente sono parole legate tr… https://t.co/gYx1OluVPi</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1122529385070899202</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1122507836288901121</td> 
+     <td class="tg-0pky">2019-04-28 17:53:55.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/europaverde_it/status/1122529385070899202">https://twitter.com/europaverde_it/status/1122529385070899202</a></td> 
+     <td class="tg-phtq">RT @beabri: Il tempo della pubblicità ingannevole è finito: vale per #Ilva, vale per le politiche per l'#ambiente sparite dall'azione di go…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1119270250510467074</td> 
+     <td class="tg-phtq">Piu_Europa</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-19 18:03:17.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Piu_Europa/status/1119270250510467074">https://twitter.com/Piu_Europa/status/1119270250510467074</a></td> 
+     <td class="tg-phtq">Una Repubblica che pensa a giovani e ambiente ogni volta che fa una nuova legge: un'utopia che vogliamo far diventa… https://t.co/WVlPNl3Ywv</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1114838936235466752</td> 
+     <td class="tg-phtq">Piu_Europa</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-07 12:34:49.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/Piu_Europa/status/1114838936235466752">https://twitter.com/Piu_Europa/status/1114838936235466752</a></td> 
+     <td class="tg-phtq">A #Firenze stiamo costruendo il programma per il futuro. Questo è il tavolo di #EUreka su Terra, ambiente e clima… https://t.co/RltVwyo1W7</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131929940818112515</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1131929758504280065</td> 
+     <td class="tg-0pky">2019-05-24 16:28:22.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/europaverde_it/status/1131929940818112515">https://twitter.com/europaverde_it/status/1131929940818112515</a></td> 
+     <td class="tg-phtq">RT @monkeyema: Domenica l'Europa 🇪🇺 può dire al mondo 🌍 che vogliamo essere più sostenibili 🌻 l' #AMBIENTE è la nostra 1° priorità. #Vot…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1123175978484809728</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-30 12:43:15.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/europaverde_it/status/1123175978484809728">https://twitter.com/europaverde_it/status/1123175978484809728</a></td> 
+     <td class="tg-phtq">Su #Taranto e in generale sui temi dell'#ambiente e del #clima è stata fatta pubblicità ingannevole dal #m5s. Una p… https://t.co/yFRYT0u6PH</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1123177234339123201</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-30 12:48:14.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/europaverde_it/status/1123177234339123201">https://twitter.com/europaverde_it/status/1123177234339123201</a></td> 
+     <td class="tg-phtq">In Italia si parla troppo poco di #clima e #ambiente: quando è uscito il rapporto IPCC ho dovuto informarmi sulla s… https://t.co/14v8zI5nsn</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1107238653477179394</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-03-17 12:14:01.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/pdnetwork/status/1107238653477179394">https://twitter.com/pdnetwork/status/1107238653477179394</a></td> 
+     <td class="tg-phtq">"Non è vero che progresso e #ambiente sono nemici, anzi solo la svolta #green ci può far tornare un nuovo grande pa… https://t.co/nWwWMXnQUE</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1126869840709472256</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1126861553515540481</td> 
+     <td class="tg-0pky">2019-05-10 17:21:20.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/europaverde_it/status/1126869840709472256">https://twitter.com/europaverde_it/status/1126869840709472256</a></td> 
+     <td class="tg-phtq">RT @beabri: In #Italia c'è una forte attenzione per i temi di #clima e #ambiente: lo dimostrano i giovani che hanno animato le piazze in qu…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131169584927715329</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1131169316802633728</td> 
+     <td class="tg-0pky">2019-05-22 14:06:59.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/forza_italia/status/1131169584927715329">https://twitter.com/forza_italia/status/1131169584927715329</a></td> 
+     <td class="tg-phtq">RT @berlusconi: Tra le tante sfide di cui occuperemo in #Europa c'è anche quella per l'#ambiente. Se avete a cuore il futuro del nostro p…</td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1126124910873595904</td> 
+     <td class="tg-phtq">SiamoEuropei</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1126109499964547072</td> 
+     <td class="tg-0pky">2019-05-08 16:01:15.0</td> 
+     <td class="tg-phtq"><a href="https://twitter.com/SiamoEuropei/status/1126124910873595904">https://twitter.com/SiamoEuropei/status/1126124910873595904</a></td> 
+     <td class="tg-phtq">RT @virginiapuzzolo: Ambienti come questi non possono che ispirarmi idee da proporre e sviluppare. All'@_OpenCampus si coltiva il #digitale…</td> 
+    </tr>
+   </tbody>
+  </table> 
+  <p>Sorting function from <a target="_blank" href="https://stackoverflow.com/a/49041392">here</a></p>  
+ </body>
+</html>
