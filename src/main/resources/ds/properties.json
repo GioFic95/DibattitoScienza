@@ -1,0 +1,24 @@
+{
+  "conf0": {
+    "oack": "3tHW4WOprixcq2q7bZZJOdw0F",
+    "oacs": "5vVWfUT89Diqd85XB5Eegx4vTTj8I7inhM92fZ273l4r9BzzuY",
+    "oaat": "753342422-Cdxbwri8Xw4PtglVJDjkCBVJ4TynKjpIsehNUWYn",
+    "oats": "qhYaZ8TrIa2cjlA7Cy7779lFpp2D0UvVFzTLFHEebrmRN"
+  },
+  "conf1": {
+    "oack": "6Db0Vv15W0IlRWEKNtBsUZf94",
+    "oacs": "qciX6n7yTzHI4nJN6Ztmc50ejAwEtymRY9snHD3AKqyl9wEkZ9",
+    "oaat": "753342422-Ppv3HxwW73BDq8X1EkfWd2nWYp6HitQiIhFrnmaf",
+    "oats": "L80vEG0rLE3fGUmBd3MkVvwVrExoNQOzSjaEVg380Zfhn"
+  },
+  "postgres_db": {
+    "dbURL": "jdbc:postgresql://localhost:5432/twitter",
+    "dbUser": "postgres",
+    "dbPsw": "pSQLdb17GF"
+  },
+  "maria_db": {
+    "dbURL": "jdbc:mariadb://localhost/twitter",
+    "dbUser": "root",
+    "dbPsw": "my13DBSM95sql"
+  }
+}
