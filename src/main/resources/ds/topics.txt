@@ -1,0 +1,14 @@
+ambiente~1
+agricoltura~1
+bioetica~1
+biotecnologie~1
+clima~1
+digitale~1
+(innovazione~1 AND settore~1 AND privato~1)
+medicina~1
+salute~1
+(politiche~1 AND energetiche~1)
+(ricerca~1 AND settore~1 AND pubblico~1)
+scuola~1
+università~1
+(ricerca~1 AND spaziale~1)

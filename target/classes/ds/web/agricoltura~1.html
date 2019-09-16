@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>Dibattito Scienza</title> 
+  <style type="text/css">
+        table {table-layout: fixed; width: 100%;}
+        .tg  {border-collapse:collapse;border-spacing:0;border-color:#9ABAD9;}
+        .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#9ABAD9;color:#444;background-color:#EBF5FF;}
+        .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#9ABAD9;color:#fff;background-color:#409cff;cursor: pointer;}
+        .tg .tg-phtq{background-color:#D2E4FC;border-color:inherit;text-align:left;vertical-align:top}
+        .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+
+    </style> 
+  <script>
+        window.onload=function() {
+            const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
+
+            const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
+                    v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+            )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+
+            // do the work...
+            document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
+                const table = th.closest('table');
+                console.log(table.querySelectorAll("tbody:nth-child(n+2) tr"));
+                Array.from(table.querySelectorAll('tbody:nth-child(n+2) tr'))
+                    .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
+                    .forEach(tr => {
+                        const tbody = document.createElement("tbody");
+                        tbody.appendChild(tr);
+                        table.appendChild(tbody)
+                    });
+            })));
+        }
+    </script> 
+ </head> 
+ <body> 
+  <h1>Dibattito Scienza</h1> 
+  <h2>Click on the column headers to sort the rows.</h2> 
+  <h2>Clicca sulle intestazioni delle colonne per ordinare le righe.</h2> 
+  <table class="tg" id="my-table"> 
+   <tbody>
+    <tr> 
+     <th class="tg-0pky">TweetID 👈</th> 
+     <th class="tg-0pky">UserName 👈</th> 
+     <th class="tg-0pky">InReplyID 👈</th> 
+     <th class="tg-0pky">RetweetId 👈</th> 
+     <th class="tg-0pky">DateTime 👈</th> 
+     <!--<th class="tg-0pky">Url 👈</th>--> 
+     <!-- <th class="tg-0pky">Topic 👈</th> --> 
+     <th class="tg-0pky" style="width: 230.4px;">Text 👈</th> 
+    </tr> 
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1118830834616811520</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-18 12:57:12.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Agricoltura, FdI annuncia astensione per il voto finale sul&nbsp;decreto <a href="https://t.co/4pK3StM86R">https://t.co/4pK3StM86R</a> <a href="https://t.co/kEaND8yzho">pic.twitter.com/kEaND8yzho</a></p>— Fratelli d'Italia 🇮🇹 (@FratellidItaIia) 
+       <a href="https://twitter.com/FratellidItaIia/status/1118830834616811520?ref_src=twsrc%5Etfw">April 18, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1113749130852085761</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1113748925251563520</td> 
+     <td class="tg-0pky">2019-04-04 12:24:19.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr"><a href="https://twitter.com/hashtag/LOraDelVerde?src=hash&amp;ref_src=twsrc%5Etfw">#LOraDelVerde</a>: Ricordate questo video di <a href="https://twitter.com/GiorgiaMeloni?ref_src=twsrc%5Etfw">@GiorgiaMeloni</a> dedicato alla difesa degli interessi della nostra agricoltura?<a href="https://twitter.com/hashtag/2minuticongiorgia?src=hash&amp;ref_src=twsrc%5Etfw">#2minuticongiorgia</a> <a href="https://twitter.com/hashtag/madeinitaly?src=hash&amp;ref_src=twsrc%5Etfw">#madeinitaly</a> <a href="https://twitter.com/hashtag/iostoconlaMeloni?src=hash&amp;ref_src=twsrc%5Etfw">#iostoconlaMeloni</a> <a href="https://t.co/KRL74j4qZX">pic.twitter.com/KRL74j4qZX</a></p>— #iostoconlaMeloni (@iostoconGiorgia) 
+       <a href="https://twitter.com/iostoconGiorgia/status/1113748925251563520?ref_src=twsrc%5Etfw">April 4, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1119644490044772352</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1119251791147827201</td> 
+     <td class="tg-0pky">2019-04-20 18:50:23.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">VITTORIA di <a href="https://twitter.com/FratellidItaIia?ref_src=twsrc%5Etfw">@FratellidItaIia</a>! Approvato alla Camera il nostro emendamento <a href="https://twitter.com/hashtag/SalvaPescatori?src=hash&amp;ref_src=twsrc%5Etfw">#SalvaPescatori</a> nel decreto Agricoltura. <br><br>🇮🇹 <a href="https://twitter.com/hashtag/VotaItaliano?src=hash&amp;ref_src=twsrc%5Etfw">#VotaItaliano</a> <a href="https://twitter.com/hashtag/Fratelliditalia?src=hash&amp;ref_src=twsrc%5Etfw">#Fratelliditalia</a> 🇮🇹 <a href="https://t.co/jZuXCJEULI">pic.twitter.com/jZuXCJEULI</a></p>— Emanuele Prisco (@EmanuelePrisco) 
+       <a href="https://twitter.com/EmanuelePrisco/status/1119251791147827201?ref_src=twsrc%5Etfw">April 19, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1128702439790731266</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-15 18:43:26.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Agricoltura. La Pietra: Dl deludente che non aiuta settore. Centinaio affronti grande emergenza&nbsp;burocrazia <a href="https://t.co/FbEaU4x2oc">https://t.co/FbEaU4x2oc</a></p>— Fratelli d'Italia 🇮🇹 (@FratellidItaIia) 
+       <a href="https://twitter.com/FratellidItaIia/status/1128702439790731266?ref_src=twsrc%5Etfw">May 15, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1119592917319004165</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-20 15:25:27.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Dl agricoltura, Meloni: Vittoria FdI con ok a emendamento ‘salva pescatori’ <a href="https://t.co/EstopHnet4">https://t.co/EstopHnet4</a> <a href="https://t.co/pvVAwCfDvy">pic.twitter.com/pvVAwCfDvy</a></p>— Fratelli d'Italia 🇮🇹 (@FratellidItaIia) 
+       <a href="https://twitter.com/FratellidItaIia/status/1119592917319004165?ref_src=twsrc%5Etfw">April 20, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1119248801318035457</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1119248230322032642</td> 
+     <td class="tg-0pky">2019-04-19 16:38:03.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Vittoria di <a href="https://twitter.com/hashtag/FratellidItalia?src=hash&amp;ref_src=twsrc%5Etfw">#FratellidItalia</a>: approvato alla Camera il nostro emendamento <a href="https://twitter.com/hashtag/SalvaPescatori?src=hash&amp;ref_src=twsrc%5Etfw">#SalvaPescatori</a> al dl Agricoltura. Oggi la riforma del quadro sanzionatorio è realtà. La pesca è uno dei nostri settori economici d'eccellenza e noi continueremo a sostenerla, anche in Europa <a href="https://twitter.com/hashtag/cambiaretutto?src=hash&amp;ref_src=twsrc%5Etfw">#cambiaretutto</a> <a href="https://t.co/sG7BgDNvZR">pic.twitter.com/sG7BgDNvZR</a></p>— Giorgia Meloni 🇮🇹 ن (@GiorgiaMeloni) 
+       <a href="https://twitter.com/GiorgiaMeloni/status/1119248230322032642?ref_src=twsrc%5Etfw">April 19, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1112060258338271232</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1112058109122486273</td> 
+     <td class="tg-0pky">2019-03-30 19:33:21.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Con gli amici di Castiglion Fiorentino per “Girolio d’Italia 2019”. Agricoltura settore strategico della nostra economia. L’olio italiano e i nostri produttori vanno tutelati. Servono regole chiare contro pratiche sleali. E no tagli alla PAC! <a href="https://t.co/VMP6iMqQs3">pic.twitter.com/VMP6iMqQs3</a></p>— Antonio Tajani (@Antonio_Tajani) 
+       <a href="https://twitter.com/Antonio_Tajani/status/1112058109122486273?ref_src=twsrc%5Etfw">March 30, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1132033335218331649</td> 
+     <td class="tg-phtq">LegaSalvini</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1132031933876199424</td> 
+     <td class="tg-0pky">2019-05-24 23:19:13.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr"><a href="https://twitter.com/hashtag/Salvini?src=hash&amp;ref_src=twsrc%5Etfw">#Salvini</a>: Bilancio della vecchia Commissione europea prevede taglio di 3 miliardi per agricoltura italiana. Follia, già permettono importazione di prodotti dal resto del mondo.<br>📺 <a href="https://twitter.com/hashtag/BersaglioMobile?src=hash&amp;ref_src=twsrc%5Etfw">#BersaglioMobile</a> <a href="https://twitter.com/hashtag/stavoltavotolega?src=hash&amp;ref_src=twsrc%5Etfw">#stavoltavotolega</a></p>— Matteo Salvini (@matteosalvinimi) 
+       <a href="https://twitter.com/matteosalvinimi/status/1132031933876199424?ref_src=twsrc%5Etfw">May 24, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131894610974957568</td> 
+     <td class="tg-phtq">LegaSalvini</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1131894509200125953</td> 
+     <td class="tg-0pky">2019-05-24 14:07:59.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Una nuova Europa fatta di lavoro, agricoltura, allevamento, pesca, meno burocrazia, meno tasse e più sicurezza.<br>Mandiamo a casa chi ha distrutto la libertà e la dignità dei popoli.<br>Domenica, votare la Lega è l'unica scelta di buonsenso.<a href="https://twitter.com/hashtag/stavoltavotolega?src=hash&amp;ref_src=twsrc%5Etfw">#stavoltavotolega</a></p>— Agostino Marcias (@HSHaroldStark) 
+       <a href="https://twitter.com/HSHaroldStark/status/1131894509200125953?ref_src=twsrc%5Etfw">May 24, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1128939981001678848</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-16 10:27:20.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">“Mi ricandido per continuare il lavoro svolto come Presidente della Commissione <a href="https://twitter.com/hashtag/Agricoltura?src=hash&amp;ref_src=twsrc%5Etfw">#Agricoltura</a> per una forte, robusta politica agricola comune” <a href="https://twitter.com/paolodecastro?ref_src=twsrc%5Etfw">@paolodecastro</a><br>Tutti i candidati PD su <a href="https://t.co/qTgYI02yQy">https://t.co/qTgYI02yQy</a><a href="https://twitter.com/hashtag/26Maggio?src=hash&amp;ref_src=twsrc%5Etfw">#26Maggio</a> <a href="https://twitter.com/hashtag/ElezioniEuropee?src=hash&amp;ref_src=twsrc%5Etfw">#ElezioniEuropee</a> <a href="https://twitter.com/hashtag/AvantiTutti?src=hash&amp;ref_src=twsrc%5Etfw">#AvantiTutti</a> <a href="https://t.co/r2Uv8oxOrH">pic.twitter.com/r2Uv8oxOrH</a></p>— Partito Democratico 🇮🇹 🇪🇺 (@pdnetwork) 
+       <a href="https://twitter.com/pdnetwork/status/1128939981001678848?ref_src=twsrc%5Etfw">May 16, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1106857574907957248</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1106855068219908096</td> 
+     <td class="tg-0pky">2019-03-16 10:59:44.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Dopo aver autorizzato l’uso dei fanghi inquinati in agricoltura, prodotto condoni su condoni, oggi tirano in ballo un’opera strategica. Chiede scusa sull’utilizzo del gas che dovrebbe produrre meno inquinamento, tutto il resto invece per <a href="https://twitter.com/hashtag/Fico?src=hash&amp;ref_src=twsrc%5Etfw">#Fico</a> va bene. <a href="https://t.co/52ouTpC1LD">pic.twitter.com/52ouTpC1LD</a></p>— Teresa Bellanova (@TeresaBellanova) 
+       <a href="https://twitter.com/TeresaBellanova/status/1106855068219908096?ref_src=twsrc%5Etfw">March 16, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1111300526254292994</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1111300484206415872</td> 
+     <td class="tg-0pky">2019-03-28 17:14:27.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Sui <a href="https://twitter.com/hashtag/fanghi?src=hash&amp;ref_src=twsrc%5Etfw">#fanghi</a> in agricoltura <a href="https://twitter.com/redazioneiene?ref_src=twsrc%5Etfw">@redazioneiene</a> hanno toppato!<br><br>In <a href="https://twitter.com/hashtag/Liguria?src=hash&amp;ref_src=twsrc%5Etfw">#Liguria</a> non c’era un’emergenza tale da inserire nel decreto Emergenze la norma che regolamenta i fanghi? FALSO!<br>La Cassazione aveva già imposto limiti alle concentrazioni di inquinanti? FALSO!<a href="https://twitter.com/ZolezziAlberto?ref_src=twsrc%5Etfw">@ZolezziAlberto</a> <a href="https://t.co/XfEqEGqsOl">pic.twitter.com/XfEqEGqsOl</a></p>— M5S Camera (@M5S_Camera) 
+       <a href="https://twitter.com/M5S_Camera/status/1111300484206415872?ref_src=twsrc%5Etfw">March 28, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1129132579662323712</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-16 23:12:39.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">📺 <a href="https://twitter.com/hashtag/Meloni?src=hash&amp;ref_src=twsrc%5Etfw">#Meloni</a> a <a href="https://twitter.com/hashtag/DrittoeRovescio?src=hash&amp;ref_src=twsrc%5Etfw">#DrittoeRovescio</a>: "Voglio che l'<a href="https://twitter.com/hashtag/agricoltura?src=hash&amp;ref_src=twsrc%5Etfw">#agricoltura</a> italiana sia aiutata e portare sulla tavola di mia figlia prodotti buoni, che so da chi sono fatti e come sono fatti. <a href="https://twitter.com/hashtag/DifendiamoilMadeInItaly?src=hash&amp;ref_src=twsrc%5Etfw">#DifendiamoilMadeInItaly</a>, è una battaglia europea. ".<br><br>🗳️🇮🇹 <a href="https://twitter.com/hashtag/VotaItaliano?src=hash&amp;ref_src=twsrc%5Etfw">#VotaItaliano</a> <a href="https://twitter.com/hashtag/VotaFDI?src=hash&amp;ref_src=twsrc%5Etfw">#VotaFDI</a> <a href="https://twitter.com/hashtag/ScriviMeloni?src=hash&amp;ref_src=twsrc%5Etfw">#ScriviMeloni</a> 📝 <a href="https://t.co/EJBqLUfOxk">pic.twitter.com/EJBqLUfOxk</a></p>— Fratelli d'Italia 🇮🇹 (@FratellidItaIia) 
+       <a href="https://twitter.com/FratellidItaIia/status/1129132579662323712?ref_src=twsrc%5Etfw">May 16, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1128436610708705281</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-15 01:07:07.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr"><a href="https://twitter.com/hashtag/Meloni?src=hash&amp;ref_src=twsrc%5Etfw">#Meloni</a> a <a href="https://twitter.com/hashtag/Matrix?src=hash&amp;ref_src=twsrc%5Etfw">#Matrix</a>: "Abbiamo un problema molto serio legato al <a href="https://twitter.com/hashtag/dumping?src=hash&amp;ref_src=twsrc%5Etfw">#dumping</a> in Europa per la nostra <a href="https://twitter.com/hashtag/agricoltura?src=hash&amp;ref_src=twsrc%5Etfw">#agricoltura</a>. È inutile che lo Stato italiano faccia leggi contro il <a href="https://twitter.com/hashtag/caporalato?src=hash&amp;ref_src=twsrc%5Etfw">#caporalato</a> se poi l’UE importa le arance dal Marocco ed è il primo caporale".<a href="https://twitter.com/hashtag/VotaItaliano?src=hash&amp;ref_src=twsrc%5Etfw">#VotaItaliano</a> <a href="https://twitter.com/hashtag/VotaFDI?src=hash&amp;ref_src=twsrc%5Etfw">#VotaFDI</a> <a href="https://twitter.com/hashtag/ScriviMeloni?src=hash&amp;ref_src=twsrc%5Etfw">#ScriviMeloni</a> <a href="https://t.co/zDGhhq7NqG">pic.twitter.com/zDGhhq7NqG</a></p>— Fratelli d'Italia 🇮🇹 (@FratellidItaIia) 
+       <a href="https://twitter.com/FratellidItaIia/status/1128436610708705281?ref_src=twsrc%5Etfw">May 14, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1129101294998892544</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1128800942172909568</td> 
+     <td class="tg-0pky">2019-05-16 21:08:21.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Dl Emergenze <a href="https://twitter.com/hashtag/agricoltura?src=hash&amp;ref_src=twsrc%5Etfw">#agricoltura</a>: nel 2018 la <a href="https://twitter.com/hashtag/Puglia?src=hash&amp;ref_src=twsrc%5Etfw">#Puglia</a> ha perso 317 milioni di euro di produzione lorda vendibile del settore oleario e oltre un milione di giornate lavorative; da gennaio a settembre è stato necessario importare 304 milioni di euro di olio dall’estero. <a href="https://t.co/oFz9ss859D">pic.twitter.com/oFz9ss859D</a></p>— Dario Damiani (@DamianiDario) 
+       <a href="https://twitter.com/DamianiDario/status/1128800942172909568?ref_src=twsrc%5Etfw">May 15, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131582167006498816</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1131580597120524288</td> 
+     <td class="tg-0pky">2019-05-23 17:26:27.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Nel Governo manca un disegno per creare lavoro.<br><br>Industria, piccole e media imprese, agricoltora, artigianato, commercio e libere professioni vanno aiutate su tre fronti:<br><br>✅ Meno tasse<br>✅ Accesso al creditopiú facile<br>✅ Meno burocrazia <a href="https://t.co/agXRtc7jxK">pic.twitter.com/agXRtc7jxK</a></p>— Antonio Tajani (@Antonio_Tajani) 
+       <a href="https://twitter.com/Antonio_Tajani/status/1131580597120524288?ref_src=twsrc%5Etfw">May 23, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+  </table> 
+  <p>Sorting function from <a target="_blank" href="https://stackoverflow.com/a/49041392">here</a></p>  
+ </body>
+</html>

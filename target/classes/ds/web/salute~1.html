@@ -1,0 +1,1416 @@
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>Dibattito Scienza</title> 
+  <style type="text/css">
+        table {table-layout: fixed; width: 100%;}
+        .tg  {border-collapse:collapse;border-spacing:0;border-color:#9ABAD9;}
+        .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#9ABAD9;color:#444;background-color:#EBF5FF;}
+        .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#9ABAD9;color:#fff;background-color:#409cff;cursor: pointer;}
+        .tg .tg-phtq{background-color:#D2E4FC;border-color:inherit;text-align:left;vertical-align:top}
+        .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+
+    </style> 
+  <script>
+        window.onload=function() {
+            const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
+
+            const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
+                    v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+            )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+
+            // do the work...
+            document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
+                const table = th.closest('table');
+                console.log(table.querySelectorAll("tbody:nth-child(n+2) tr"));
+                Array.from(table.querySelectorAll('tbody:nth-child(n+2) tr'))
+                    .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
+                    .forEach(tr => {
+                        const tbody = document.createElement("tbody");
+                        tbody.appendChild(tr);
+                        table.appendChild(tbody)
+                    });
+            })));
+        }
+    </script> 
+ </head> 
+ <body> 
+  <h1>Dibattito Scienza</h1> 
+  <h2>Click on the column headers to sort the rows.</h2> 
+  <h2>Clicca sulle intestazioni delle colonne per ordinare le righe.</h2> 
+  <table class="tg" id="my-table"> 
+   <tbody>
+    <tr> 
+     <th class="tg-0pky">TweetID 👈</th> 
+     <th class="tg-0pky">UserName 👈</th> 
+     <th class="tg-0pky">InReplyID 👈</th> 
+     <th class="tg-0pky">RetweetId 👈</th> 
+     <th class="tg-0pky">DateTime 👈</th> 
+     <!--<th class="tg-0pky">Url 👈</th>--> 
+     <!-- <th class="tg-0pky">Topic 👈</th> --> 
+     <th class="tg-0pky" style="width: 230.4px;">Text 👈</th> 
+    </tr> 
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1112738961338830849</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1112737644583243777</td> 
+     <td class="tg-0pky">2019-04-01 17:30:16.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/sicurezza?src=hash&amp;ref_src=twsrc%5Etfw">#sicurezza</a> e <a href="https://twitter.com/hashtag/salute?src=hash&amp;ref_src=twsrc%5Etfw">#salute</a> <a href="https://twitter.com/FratellidItaIia?ref_src=twsrc%5Etfw">@FratellidItaIia</a> c’è <a href="https://t.co/5YSiqrBiX3">pic.twitter.com/5YSiqrBiX3</a></p>— Paola Frassinetti (@FrassinettiP) 
+       <a href="https://twitter.com/FrassinettiP/status/1112737644583243777?ref_src=twsrc%5Etfw">April 1, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1087727923778519040</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-01-22 16:05:20.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">L'inquinamento non diminuisce solo la salute, anche la felicità - Ambiente &amp; Energia <a href="https://t.co/Qpia7KtzxH">https://t.co/Qpia7KtzxH</a></p>— Fronte Verde (@FronteVerde) 
+       <a href="https://twitter.com/FronteVerde/status/1087727923778519040?ref_src=twsrc%5Etfw">January 22, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1132016972269539328</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1132015852327526400</td> 
+     <td class="tg-0pky">2019-05-24 22:14:12.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Noi con te, per il diritto alla <a href="https://twitter.com/hashtag/salute?src=hash&amp;ref_src=twsrc%5Etfw">#salute</a>.<a href="https://twitter.com/hashtag/lasinistra?src=hash&amp;ref_src=twsrc%5Etfw">#lasinistra</a> <a href="https://t.co/3Zg1hSiSEc">pic.twitter.com/3Zg1hSiSEc</a></p>— LaSinistraUE (@SinistraUe) 
+       <a href="https://twitter.com/SinistraUe/status/1132015852327526400?ref_src=twsrc%5Etfw">May 24, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1119202255025131520</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-19 13:33:06.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Le città devono pensare agli alberi come a un'infrastruttura di salute pubblica <a href="https://t.co/EUwAfr3LxR">https://t.co/EUwAfr3LxR</a></p>— Fronte Verde (@FronteVerde) 
+       <a href="https://twitter.com/FronteVerde/status/1119202255025131520?ref_src=twsrc%5Etfw">April 19, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1113424441759793152</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-03 14:54:07.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Castrazione chimica, FdI: Purtroppo patto nazareno gode ancora ottima&nbsp;salute <a href="https://t.co/k4ob7AL9UQ">https://t.co/k4ob7AL9UQ</a> <a href="https://t.co/aLxx1UzJaJ">pic.twitter.com/aLxx1UzJaJ</a></p>— Fratelli d'Italia 🇮🇹 (@FratellidItaIia) 
+       <a href="https://twitter.com/FratellidItaIia/status/1113424441759793152?ref_src=twsrc%5Etfw">April 3, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1122725485551726593</td> 
+     <td class="tg-phtq">FronteVerde</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-29 06:53:09.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Ministero della Salute: Le 44 aree d’Italia più inquinate e a rischio tumori <a href="https://t.co/EqrFT4disf">https://t.co/EqrFT4disf</a></p>— Fronte Verde (@FronteVerde) 
+       <a href="https://twitter.com/FronteVerde/status/1122725485551726593?ref_src=twsrc%5Etfw">April 29, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1129110475978006530</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1129073973269073921</td> 
+     <td class="tg-0pky">2019-05-16 21:44:49.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il "saluto fascista" è... <a href="https://t.co/IDY5EkMx2u">https://t.co/IDY5EkMx2u</a></p>— luca trentini 🏳️‍🌈 (@lucatrent) 
+       <a href="https://twitter.com/lucatrent/status/1129073973269073921?ref_src=twsrc%5Etfw">May 16, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1123438542653480966</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1123339330037211138</td> 
+     <td class="tg-0pky">2019-05-01 06:06:35.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">I <a href="https://twitter.com/SenioresFI?ref_src=twsrc%5Etfw">@SenioresFI</a> di <a href="https://twitter.com/forza_italia?ref_src=twsrc%5Etfw">@forza_italia</a> augurano al Presidente <a href="https://twitter.com/berlusconi?ref_src=twsrc%5Etfw">@berlusconi</a> un prontissimo ritorno in piena salute ! <a href="https://twitter.com/hashtag/ForzaSilvio?src=hash&amp;ref_src=twsrc%5Etfw">#ForzaSilvio</a> <a href="https://t.co/XwyUM7BLVG">pic.twitter.com/XwyUM7BLVG</a></p>— Enrico Pianetta (@EnricoPianetta) 
+       <a href="https://twitter.com/EnricoPianetta/status/1123339330037211138?ref_src=twsrc%5Etfw">April 30, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1109793524424286208</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1109791586253262848</td> 
+     <td class="tg-0pky">2019-03-24 13:26:09.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Inaugurato ampliamento Casa della Salute di Rubiera, assieme al Sindaco Cavallaro. Oltre 600mq completamente ristrutturati: ospiteranno 10 nuovi ambulatori, per un’assistenza sempre più vicina ai cittadini. Estendiamo la quantità di servizi socio-sanitari tenendo alta la qualità <a href="https://t.co/TkokZTrXcr">pic.twitter.com/TkokZTrXcr</a></p>— Stefano Bonaccini (@sbonaccini) 
+       <a href="https://twitter.com/sbonaccini/status/1109791586253262848?ref_src=twsrc%5Etfw">March 24, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1092016701808496640</td> 
+     <td class="tg-phtq">PartitComunista</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1091739759695806464</td> 
+     <td class="tg-0pky">2019-02-03 12:07:25.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">La questione primaria della sicurezza e della salute dei lavoratori all’interno del sistema capitalistico viene subordinata e sottomessa alle esigenze dell’estrazione del massimo profitto. Non consideriamo questi morti come “incidenti”, ma veri omicidi <a href="https://t.co/PT2zIRl1Ex">https://t.co/PT2zIRl1Ex</a></p>— Marco Rizzo (@MarcoRizzoPC) 
+       <a href="https://twitter.com/MarcoRizzoPC/status/1091739759695806464?ref_src=twsrc%5Etfw">February 2, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1113412231293743105</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1113411894969274369</td> 
+     <td class="tg-0pky">2019-04-03 14:05:36.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Quanti bambini devono ancora morire prima che il Governo intervenga? La ministra della Salute <a href="https://twitter.com/GiuliaGrilloM5S?ref_src=twsrc%5Etfw">@GiuliaGrilloM5S</a> introduca la prestazione sanitaria della <a href="https://twitter.com/hashtag/circoncisione?src=hash&amp;ref_src=twsrc%5Etfw">#circoncisione</a> nei Lea, modificando il DPCM del 2017. La religione non c’entra nulla. <a href="https://twitter.com/Antonio_Tajani?ref_src=twsrc%5Etfw">@Antonio_Tajani</a> <a href="https://twitter.com/forza_italia?ref_src=twsrc%5Etfw">@forza_italia</a></p>— Licia Ronzulli (@LiciaRonzulli) 
+       <a href="https://twitter.com/LiciaRonzulli/status/1113411894969274369?ref_src=twsrc%5Etfw">April 3, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1128653830156058624</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-15 15:30:17.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Vogliamo proteggere la <a href="https://twitter.com/hashtag/salute?src=hash&amp;ref_src=twsrc%5Etfw">#salute</a> dei cittadini europei, combattendo l’inquinamento dell’acqua e dell’aria e dicendo addio alla plastica.<br><br>E tu, cosa vuoi? <a href="https://twitter.com/hashtag/TellEurope?src=hash&amp;ref_src=twsrc%5Etfw">#TellEurope</a>, questa sera, all'<a href="https://twitter.com/hashtag/EurovisionDebate?src=hash&amp;ref_src=twsrc%5Etfw">#EurovisionDebate</a>!<a href="https://twitter.com/hashtag/AgireOra?src=hash&amp;ref_src=twsrc%5Etfw">#AgireOra</a> <a href="https://twitter.com/hashtag/VoteForClimate?src=hash&amp;ref_src=twsrc%5Etfw">#VoteForClimate</a><a href="https://t.co/g3HZ5yGnv8">https://t.co/g3HZ5yGnv8</a> <a href="https://t.co/XR64E165uZ">pic.twitter.com/XR64E165uZ</a></p>— Europa Verde (@europaverde_it) 
+       <a href="https://twitter.com/europaverde_it/status/1128653830156058624?ref_src=twsrc%5Etfw">May 15, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1122138474579144704</td> 
+     <td class="tg-phtq">Piu_Europa</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1122119512692797445</td> 
+     <td class="tg-0pky">2019-04-27 16:00:35.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Candidata collegio Lombardia, Piemonte, Liguria e Valle D’Aosta per <a href="https://twitter.com/hashtag/piueuropa?src=hash&amp;ref_src=twsrc%5Etfw">#piueuropa</a> già Direttore Generale Salute e Consumatori della Commissione UE; biologa con Laurea Honoris Causa in veterinaria. Costruiamo insieme un’Italia più forte ed europea. <a href="https://twitter.com/hashtag/scriviTestori?src=hash&amp;ref_src=twsrc%5Etfw">#scriviTestori</a> <a href="https://twitter.com/hashtag/ElezioniEuropee2019?src=hash&amp;ref_src=twsrc%5Etfw">#ElezioniEuropee2019</a> <a href="https://t.co/KRCn6gTG5p">pic.twitter.com/KRCn6gTG5p</a></p>— Testori Paola (@testori_paola) 
+       <a href="https://twitter.com/testori_paola/status/1122119512692797445?ref_src=twsrc%5Etfw">April 27, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1129757561928998913</td> 
+     <td class="tg-phtq">LegaSalvini</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-18 16:36:07.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">SALVINI SALUTA DAL PALCO CORTEO IN DUOMO <a href="https://twitter.com/hashtag/26maggiovotoLega?src=hash&amp;ref_src=twsrc%5Etfw">#26maggiovotoLega</a> <a href="https://t.co/2ON8Cu8sMH">https://t.co/2ON8Cu8sMH</a></p>— Lega - Salvini Premier (@LegaSalvini) 
+       <a href="https://twitter.com/LegaSalvini/status/1129757561928998913?ref_src=twsrc%5Etfw">May 18, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1121450792546983937</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1121445191473344512</td> 
+     <td class="tg-0pky">2019-04-25 18:27:59.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Un saluto da Rocca Priora 😀 <a href="https://t.co/gBnX2gj50m">pic.twitter.com/gBnX2gj50m</a></p>— Antonio Tajani (@Antonio_Tajani) 
+       <a href="https://twitter.com/Antonio_Tajani/status/1121445191473344512?ref_src=twsrc%5Etfw">April 25, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1111660885808959489</td> 
+     <td class="tg-phtq">PartSocialista</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-03-29 17:06:23.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr"><a href="https://twitter.com/hashtag/CongressoPsi?src=hash&amp;ref_src=twsrc%5Etfw">#CongressoPsi</a>, il messaggio di saluto di <a href="https://twitter.com/TimmermansEU?ref_src=twsrc%5Etfw">@TimmermansEU</a>. <a href="https://twitter.com/PES_PSE?ref_src=twsrc%5Etfw">@PES_PSE</a> <a href="https://t.co/DxvVlWYAZ4">pic.twitter.com/DxvVlWYAZ4</a></p>— PSI Official (@PartSocialista) 
+       <a href="https://twitter.com/PartSocialista/status/1111660885808959489?ref_src=twsrc%5Etfw">March 29, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1096418235510124550</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1096410343818084352</td> 
+     <td class="tg-0pky">2019-02-15 15:37:32.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Orgogliosa dei contenuti che stanno prendendo forma nel manifesto per le elezioni <a href="https://twitter.com/hashtag/UE?src=hash&amp;ref_src=twsrc%5Etfw">#UE</a>: salute, ambiente, giustizia sociale e democrazia. Puntiamo dritti al cuore delle istituzioni e le apriamo ai cittadini. Per un’Europa dei Popoli e non delle lobby <a href="https://twitter.com/hashtag/cambiamolainsieme?src=hash&amp;ref_src=twsrc%5Etfw">#cambiamolainsieme</a> <a href="https://t.co/I9a9mocAHJ">pic.twitter.com/I9a9mocAHJ</a></p>— Conny Giordano (@ConnyGiordano_5) 
+       <a href="https://twitter.com/ConnyGiordano_5/status/1096410343818084352?ref_src=twsrc%5Etfw">February 15, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1113783661848084481</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1113775225760567296</td> 
+     <td class="tg-0pky">2019-04-04 14:41:32.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Con <a href="https://twitter.com/hashtag/Sanit%C3%A0Trasparente?src=hash&amp;ref_src=twsrc%5Etfw">#SanitàTrasparente</a> portiamo nuove regole che contrastino la corruzione e garantiscano il diritto alla salute di tutti i cittadini. Ogni donazione dell’industria sanitaria a medici e personale amministrativo sarà resa pubblica! I pazienti devono tornare al centro! <a href="https://twitter.com/hashtag/m5s?src=hash&amp;ref_src=twsrc%5Etfw">#m5s</a> <a href="https://t.co/YgaP3Yzkdn">pic.twitter.com/YgaP3Yzkdn</a></p>— Stefania Mammì (@stefaniamammi) 
+       <a href="https://twitter.com/stefaniamammi/status/1113775225760567296?ref_src=twsrc%5Etfw">April 4, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1105532303340720128</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1105531897969627137</td> 
+     <td class="tg-0pky">2019-03-12 19:13:35.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Con l’approvazione del <a href="https://twitter.com/hashtag/RegistroTumori?src=hash&amp;ref_src=twsrc%5Etfw">#RegistroTumori</a> un’altra nostra battaglia per il diritto alla salute è legge. Prevenzione, cure migliori, impulso alla ricerca e allo studio del legame tra malattie e inquinamento. Un grande passo anche nella direzione di politiche ambientali sostenibili.</p>— Francesco D'Uva (@F_DUva) 
+       <a href="https://twitter.com/F_DUva/status/1105531897969627137?ref_src=twsrc%5Etfw">March 12, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1126153400079585280</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-08 17:54:28.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">"Il ministero della Salute svolge un ruolo importantissimo anche nella protezione degli animali. Da giugno verrà pubblicato online il registro per le segnalazioni di avvelenamento ai danni degli animali."<a href="https://twitter.com/GiuliaGrilloM5S?ref_src=twsrc%5Etfw">@GiuliaGrilloM5S</a> <a href="https://twitter.com/hashtag/ProteggiAnimali?src=hash&amp;ref_src=twsrc%5Etfw">#ProteggiAnimali</a><br><br>Collegatevi ▶️ <a href="https://t.co/pdQGGaykY6">https://t.co/pdQGGaykY6</a> <a href="https://t.co/TcL9NtOEsP">pic.twitter.com/TcL9NtOEsP</a></p>— Movimento 5 Stelle (@Mov5Stelle) 
+       <a href="https://twitter.com/Mov5Stelle/status/1126153400079585280?ref_src=twsrc%5Etfw">May 8, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1116994398305357824</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-13 11:19:51.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il segretario del Pd dell’Umbria, Giampiero Bocci, e l’assessore regionale alla salute Luca Barberini sono finiti agli arresti domiciliari per presunte irregolarità in merito a un concorso per assunzioni in ambito sanitario.<br><br>Leggi qui 👇<a href="https://t.co/huYhVMDHg5">https://t.co/huYhVMDHg5</a></p>— Movimento 5 Stelle (@Mov5Stelle) 
+       <a href="https://twitter.com/Mov5Stelle/status/1116994398305357824?ref_src=twsrc%5Etfw">April 13, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1127211836980563968</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-11 16:00:19.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">"Con questo progetto politico, ci proponiamo di abbracciare l' <a href="https://twitter.com/hashtag/ambiente?src=hash&amp;ref_src=twsrc%5Etfw">#ambiente</a> nella sua accezione più ampia: <a href="https://twitter.com/hashtag/salute?src=hash&amp;ref_src=twsrc%5Etfw">#salute</a>, questioni sociali, <a href="https://twitter.com/hashtag/istruzione?src=hash&amp;ref_src=twsrc%5Etfw">#istruzione</a>, <a href="https://twitter.com/hashtag/lavoro?src=hash&amp;ref_src=twsrc%5Etfw">#lavoro</a>. Tutto l'ambiente che ci circonda".<br><br>Eliana Baldo per <a href="https://twitter.com/hashtag/EuropaVerde?src=hash&amp;ref_src=twsrc%5Etfw">#EuropaVerde</a> alle <a href="https://twitter.com/hashtag/Europee2019?src=hash&amp;ref_src=twsrc%5Etfw">#Europee2019</a> <a href="https://t.co/f0g2asATtI">pic.twitter.com/f0g2asATtI</a></p>— Europa Verde (@europaverde_it) 
+       <a href="https://twitter.com/europaverde_it/status/1127211836980563968?ref_src=twsrc%5Etfw">May 11, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1126568716425203712</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1126567737952755719</td> 
+     <td class="tg-0pky">2019-05-09 21:24:47.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">.<a href="https://twitter.com/forza_italia?ref_src=twsrc%5Etfw">@forza_italia</a> è contraria alla legalizzazione della <a href="https://twitter.com/hashtag/droga?src=hash&amp;ref_src=twsrc%5Etfw">#droga</a>, ma anche della <a href="https://twitter.com/hashtag/prostituzione?src=hash&amp;ref_src=twsrc%5Etfw">#prostituzione</a>. La salute e il rispetto della donna vengono prima di ogni cosa. Il giochino del “chi la spara più grossa” ha stancato. Su temi così delicati zero propaganda.</p>— Mariastella Gelmini (@msgelmini) 
+       <a href="https://twitter.com/msgelmini/status/1126567737952755719?ref_src=twsrc%5Etfw">May 9, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1130038787956989952</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1129759843928150016</td> 
+     <td class="tg-0pky">2019-05-19 11:13:36.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">++ Presentazione libro CasaPound, campane chiesa a morto ++<br>Le campane della chiesa di Nostra Signora della Salute alla Spezia hanno suonato "a morto". Il parroco ha confermato: "gesto di protesta. Oggi è morto quello spirito che ha pervaso questa città per anni". (fonte ANSA).</p>— nello scavo (@nelloscavo) 
+       <a href="https://twitter.com/nelloscavo/status/1129759843928150016?ref_src=twsrc%5Etfw">May 18, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1113380005663399937</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1113254399323791360</td> 
+     <td class="tg-0pky">2019-04-03 11:57:33.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Se per avere crescita basta approvare il “decreto crescita”, vi prego, approvate quello “decreto salute e giovinezza per tutti”....</p>— Guido Crosetto (@GuidoCrosetto) 
+       <a href="https://twitter.com/GuidoCrosetto/status/1113254399323791360?ref_src=twsrc%5Etfw">April 3, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1130474439416717313</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1130474323637092358</td> 
+     <td class="tg-0pky">2019-05-20 16:04:44.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">L'Italia dichiari l'<a href="https://twitter.com/hashtag/EmergenzaClimatica?src=hash&amp;ref_src=twsrc%5Etfw">#EmergenzaClimatica</a> come segno di civiltà, di attenzione alle future generazioni e alla salute di tutti noi. <a href="https://twitter.com/hashtag/EuropaVerde?src=hash&amp;ref_src=twsrc%5Etfw">#EuropaVerde</a> <a href="https://t.co/AuEEZIPtpB">https://t.co/AuEEZIPtpB</a></p>— VerdiTaranto (@VerdiTaranto) 
+       <a href="https://twitter.com/VerdiTaranto/status/1130474323637092358?ref_src=twsrc%5Etfw">May 20, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1122457508256387073</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1122457378434236417</td> 
+     <td class="tg-0pky">2019-04-28 13:08:18.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Oggi è la giornata mondiale della <a href="https://twitter.com/hashtag/SicurezzaSulLavoro?src=hash&amp;ref_src=twsrc%5Etfw">#SicurezzaSulLavoro</a>. È compito della politica vigilare sulla salute e tutelare i lavoratori, promuovendo azioni concrete di prevenzione nei luoghi di lavoro. Il lavoro è un diritto, così come la salute. <a href="https://t.co/jIYaDjit2n">https://t.co/jIYaDjit2n</a></p>— Debora Serracchiani (@serracchiani) 
+       <a href="https://twitter.com/serracchiani/status/1122457378434236417?ref_src=twsrc%5Etfw">April 28, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1111687927879385088</td> 
+     <td class="tg-phtq">PartSocialista</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-03-29 18:53:50.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr"><a href="https://twitter.com/hashtag/CongressoPsi?src=hash&amp;ref_src=twsrc%5Etfw">#CongressoPsi</a>, <a href="https://twitter.com/NenciniPsi?ref_src=twsrc%5Etfw">@NenciniPsi</a> Un saluto ad <a href="https://twitter.com/emanuelepecheux?ref_src=twsrc%5Etfw">@emanuelepecheux</a> perché mi manca. <a href="https://twitter.com/hashtag/LiberinEuropa?src=hash&amp;ref_src=twsrc%5Etfw">#LiberinEuropa</a> <a href="https://t.co/GCqfeOyF1b">pic.twitter.com/GCqfeOyF1b</a></p>— PSI Official (@PartSocialista) 
+       <a href="https://twitter.com/PartSocialista/status/1111687927879385088?ref_src=twsrc%5Etfw">March 29, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131261484405800961</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1131206328100302848</td> 
+     <td class="tg-0pky">2019-05-22 20:12:10.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Lotta alla povertà e tutela della salute:<br>❌No assistenzialismo del <a href="https://twitter.com/hashtag/RedditodiCittadinanza?src=hash&amp;ref_src=twsrc%5Etfw">#RedditodiCittadinanza</a><br>✅Sì aiuto economico a chi non può lavorare: bambini, disabili, pensionati<br>✅Riconoscimento <a href="https://twitter.com/hashtag/caregiver?src=hash&amp;ref_src=twsrc%5Etfw">#caregiver</a> familiari<br>✅Estensione diritto alla salute anche in ambito odontoiatrico<a href="https://twitter.com/hashtag/VotaItaliano?src=hash&amp;ref_src=twsrc%5Etfw">#VotaItaliano</a> <a href="https://t.co/UqTR8fxTT3">pic.twitter.com/UqTR8fxTT3</a></p>— Giorgia Meloni 🇮🇹 ن (@GiorgiaMeloni) 
+       <a href="https://twitter.com/GiorgiaMeloni/status/1131206328100302848?ref_src=twsrc%5Etfw">May 22, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1105515189452058624</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1105514100203941889</td> 
+     <td class="tg-0pky">2019-03-12 18:05:35.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Scienza, ambiente e salute da oggi grazie alla Rete nazionale per il registro tumori e al Referto epidemiologico, vengono messe in correlazione! Finalmente sapremo quanto lo smog, l’industria e i rifiuti tossici influiscono sull’insorgere di tante malattie. <a href="https://twitter.com/hashtag/RegistroTumori?src=hash&amp;ref_src=twsrc%5Etfw">#RegistroTumori</a></p>— Nicola Provenza (@NicolaProvenza) 
+       <a href="https://twitter.com/NicolaProvenza/status/1105514100203941889?ref_src=twsrc%5Etfw">March 12, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1092806074263064576</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1092805518849175553</td> 
+     <td class="tg-0pky">2019-02-05 16:24:06.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Da oggi la squadra del Consiglio Superiore di Sanità è al completo. Il ministro della Salute <a href="https://twitter.com/GiuliaGrilloM5S?ref_src=twsrc%5Etfw">@GiuliaGrilloM5S</a> ha nominato 30 nuove figure di fama indiscussa nel campo clinico-scientifico mondiale basandosi sul criterio del <a href="https://twitter.com/hashtag/merito?src=hash&amp;ref_src=twsrc%5Etfw">#merito</a> e dell’eccellenza, e continueremo a farlo! <a href="https://twitter.com/hashtag/CSS?src=hash&amp;ref_src=twsrc%5Etfw">#CSS</a></p>— Marialucia Lorefice (@Mlucialorefice) 
+       <a href="https://twitter.com/Mlucialorefice/status/1092805518849175553?ref_src=twsrc%5Etfw">February 5, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131926827281391622</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-24 16:16:00.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Salvare il pianeta come segno di civiltà, di attenzione alle future generazioni e alla salute di tutti noi. <a href="https://twitter.com/hashtag/VoteForClimate?src=hash&amp;ref_src=twsrc%5Etfw">#VoteForClimate</a> <a href="https://twitter.com/hashtag/EuropaVerde?src=hash&amp;ref_src=twsrc%5Etfw">#EuropaVerde</a> <a href="https://t.co/7ndqyE9FLO">https://t.co/7ndqyE9FLO</a></p>— Europa Verde (@europaverde_it) 
+       <a href="https://twitter.com/europaverde_it/status/1131926827281391622?ref_src=twsrc%5Etfw">May 24, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1126354180652838912</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1126159954749153280</td> 
+     <td class="tg-0pky">2019-05-09 07:12:17.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Un'importante vittoria per la salute di tutti. La Corte di giustizia europea ha bloccato il piano inceneritori. <br><br>Le parole di <a href="https://twitter.com/NandoBonessio?ref_src=twsrc%5Etfw">@NandoBonessio</a> e <a href="https://twitter.com/beabri?ref_src=twsrc%5Etfw">@beabri</a><a href="https://twitter.com/hashtag/ToccaANoi?src=hash&amp;ref_src=twsrc%5Etfw">#ToccaANoi</a> <a href="https://twitter.com/hashtag/AgireOra?src=hash&amp;ref_src=twsrc%5Etfw">#AgireOra</a><a href="https://t.co/bOlD72QR1k">https://t.co/bOlD72QR1k</a></p>— Europa Verde (@europaverde_it) 
+       <a href="https://twitter.com/europaverde_it/status/1126159954749153280?ref_src=twsrc%5Etfw">May 8, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1117729339141951489</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-15 12:00:15.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Io sono di Taranto, città emblematica perchè Taranto rappresneta la violazione del diritto alla salute con 12 decreti, inclusa immunità penale.<br>Siamo per principio di chi inquina paga, voto ad <a href="https://twitter.com/hashtag/EuropaVerde?src=hash&amp;ref_src=twsrc%5Etfw">#EuropaVerde</a> è un voto per le nuove generazioni. <a href="https://twitter.com/hashtag/ElianaBaldo?src=hash&amp;ref_src=twsrc%5Etfw">#ElianaBaldo</a> <br>Capolista per il sud.</p>— Europa Verde (@europaverde_it) 
+       <a href="https://twitter.com/europaverde_it/status/1117729339141951489?ref_src=twsrc%5Etfw">April 15, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1124278864585293824</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-03 13:45:44.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Ambiente, salute, giustizia, lavoro, lotta a sprechi e privilegi: sono tanti i fronti su cui il <a href="https://twitter.com/Mov5Stelle?ref_src=twsrc%5Etfw">@Mov5Stelle</a> combatte per il Cambiamento.<br>Parliamone insieme all'<a href="https://twitter.com/hashtag/AvantiTuttiTour?src=hash&amp;ref_src=twsrc%5Etfw">#AvantiTuttiTour</a> in Sardegna con <a href="https://twitter.com/gparagone?ref_src=twsrc%5Etfw">@gparagone</a>, <a href="https://twitter.com/ettore_licheri?ref_src=twsrc%5Etfw">@ettore_licheri</a> e Sean Wheeler!<br><br>Collegatevi ▶️ <a href="https://t.co/CG7tuBkXff">https://t.co/CG7tuBkXff</a> <a href="https://t.co/Wh5PImiMfO">pic.twitter.com/Wh5PImiMfO</a></p>— Movimento 5 Stelle (@Mov5Stelle) 
+       <a href="https://twitter.com/Mov5Stelle/status/1124278864585293824?ref_src=twsrc%5Etfw">May 3, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1105512273425170437</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-03-12 17:54:00.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">APPROVATA LA RETE NAZIONALE REGISTRI TUMORI!<br><br>Finalmente la nostra storica battaglia per il diritto alla salute è legge.<br>Offriamo più prevenzione, cure migliori e un maggiore sostegno alla ricerca scientifica grazie a dati pubblici e completi che non abbiamo mai avuto! <a href="https://t.co/IuT58uPuxe">pic.twitter.com/IuT58uPuxe</a></p>— Movimento 5 Stelle (@Mov5Stelle) 
+       <a href="https://twitter.com/Mov5Stelle/status/1105512273425170437?ref_src=twsrc%5Etfw">March 12, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1080896599784595457</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1080896167343542278</td> 
+     <td class="tg-0pky">2019-01-03 19:40:06.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">In <a href="https://twitter.com/hashtag/Campania?src=hash&amp;ref_src=twsrc%5Etfw">#Campania</a> non possiamo più tollerare casi di <a href="https://twitter.com/hashtag/formiche?src=hash&amp;ref_src=twsrc%5Etfw">#formiche</a>. Basta malasanità, con la salute dei cittadini non si scherza. È inconcepibile, e la responsabilità è tutta degli attuali vertici. De Luca dimettiti subito!</p>— Luigi Iovino (@IovinoLuigiM5S) 
+       <a href="https://twitter.com/IovinoLuigiM5S/status/1080896167343542278?ref_src=twsrc%5Etfw">January 3, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1080898933801537536</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1080898528321458177</td> 
+     <td class="tg-0pky">2019-01-03 19:49:22.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">La <a href="https://twitter.com/hashtag/salute?src=hash&amp;ref_src=twsrc%5Etfw">#salute</a> è una cosa seria e serio dev'essere chi vigila sulle strutture ospedaliere. Inammissibile sentire ancora di formiche sui pazienti del <a href="https://twitter.com/hashtag/SanGiovanniBosco?src=hash&amp;ref_src=twsrc%5Etfw">#SanGiovanniBosco</a> di <a href="https://twitter.com/hashtag/Napoli?src=hash&amp;ref_src=twsrc%5Etfw">#Napoli</a>. <a href="https://twitter.com/hashtag/DeLucaDimettiti?src=hash&amp;ref_src=twsrc%5Etfw">#DeLucaDimettiti</a> <a href="https://t.co/QjhacKG74j">pic.twitter.com/QjhacKG74j</a></p>— Manlio Di Stefano (@ManlioDS) 
+       <a href="https://twitter.com/ManlioDS/status/1080898528321458177?ref_src=twsrc%5Etfw">January 3, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1129718133407793152</td> 
+     <td class="tg-phtq">LegaSalvini</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1129717934966878208</td> 
+     <td class="tg-0pky">2019-05-18 13:59:26.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr"><a href="https://twitter.com/hashtag/26maggiovotoLega?src=hash&amp;ref_src=twsrc%5Etfw">#26maggiovotoLega</a> non posso essere presente a Milano per motivi di salute, ma vi seguirò in diretta Facebook <a href="https://t.co/JtaUPc5ymX">pic.twitter.com/JtaUPc5ymX</a></p>— sonia pannunzi 🇮🇹 (@SoniaPannunzi) 
+       <a href="https://twitter.com/SoniaPannunzi/status/1129717934966878208?ref_src=twsrc%5Etfw">May 18, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1126159954749153280</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-08 18:20:30.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Un'importante vittoria per la salute di tutti. La Corte di giustizia europea ha bloccato il piano inceneritori. <br><br>Le parole di <a href="https://twitter.com/NandoBonessio?ref_src=twsrc%5Etfw">@NandoBonessio</a> e <a href="https://twitter.com/beabri?ref_src=twsrc%5Etfw">@beabri</a><a href="https://twitter.com/hashtag/ToccaANoi?src=hash&amp;ref_src=twsrc%5Etfw">#ToccaANoi</a> <a href="https://twitter.com/hashtag/AgireOra?src=hash&amp;ref_src=twsrc%5Etfw">#AgireOra</a><a href="https://t.co/bOlD72QR1k">https://t.co/bOlD72QR1k</a></p>— Europa Verde (@europaverde_it) 
+       <a href="https://twitter.com/europaverde_it/status/1126159954749153280?ref_src=twsrc%5Etfw">May 8, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1124251743217508352</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-03 11:57:57.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">“<a href="https://twitter.com/hashtag/Salute?src=hash&amp;ref_src=twsrc%5Etfw">#Salute</a> e <a href="https://twitter.com/hashtag/ambiente?src=hash&amp;ref_src=twsrc%5Etfw">#ambiente</a>: la nostra regione registra il primato per la più alta percentuale di malattie professionali nel territorio italiano. In <a href="https://twitter.com/hashtag/Europa?src=hash&amp;ref_src=twsrc%5Etfw">#Europa</a> ci sarà molto da fare!”.<br><br>Tiziana Cimolino, medico e candidata di <a href="https://twitter.com/hashtag/EuropaVerde?src=hash&amp;ref_src=twsrc%5Etfw">#EuropaVerde</a><a href="https://twitter.com/hashtag/AgireOra?src=hash&amp;ref_src=twsrc%5Etfw">#AgireOra</a> <a href="https://twitter.com/hashtag/ToccaAnoi?src=hash&amp;ref_src=twsrc%5Etfw">#ToccaAnoi</a></p>— Europa Verde (@europaverde_it) 
+       <a href="https://twitter.com/europaverde_it/status/1124251743217508352?ref_src=twsrc%5Etfw">May 3, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1112019239681036288</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1112000055735713792</td> 
+     <td class="tg-0pky">2019-03-30 16:50:21.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il Governo vuole eliminare l’obbligo vaccinale. Nel Lazio invece faremo di tutto per garantirlo perché la salute dei bambini viene prima di ogni cosa</p>— Nicola Zingaretti (@nzingaretti) 
+       <a href="https://twitter.com/nzingaretti/status/1112000055735713792?ref_src=twsrc%5Etfw">March 30, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1116803448744415233</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1116802302805983240</td> 
+     <td class="tg-0pky">2019-04-12 22:41:06.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Vergognoso quanto successo in Umbria, non c’è cosa più meschina di speculare sulla sanità. Significa scherzare con la salute dei cittadini. Serve una riforma epocale che impedisca alla politica di piazzare amici a discapito di eccellenze mettendo a rischio la vita degli italiani. <a href="https://t.co/AqvmpOi0Y1">pic.twitter.com/AqvmpOi0Y1</a></p>— Francesco D'Uva (@F_DUva) 
+       <a href="https://twitter.com/F_DUva/status/1116802302805983240?ref_src=twsrc%5Etfw">April 12, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131228223596060672</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-22 18:00:00.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">L’<a href="https://twitter.com/hashtag/UE?src=hash&amp;ref_src=twsrc%5Etfw">#UE</a> ha bisogno di un nuovo programma di azione ambientale. Questo migliorerebbe la salute di milioni di persone. <br><br>La <a href="https://twitter.com/hashtag/Salute?src=hash&amp;ref_src=twsrc%5Etfw">#Salute</a> è una delle nostre <a href="https://twitter.com/hashtag/12Priorit%C3%A0?src=hash&amp;ref_src=twsrc%5Etfw">#12Priorità</a>. <a href="https://twitter.com/hashtag/VoteForClimate?src=hash&amp;ref_src=twsrc%5Etfw">#VoteForClimate</a> ➡️ <a href="https://t.co/jJ9UVlsUhR">https://t.co/jJ9UVlsUhR</a> <a href="https://t.co/ZjAkLjSsZX">pic.twitter.com/ZjAkLjSsZX</a></p>— Europa Verde (@europaverde_it) 
+       <a href="https://twitter.com/europaverde_it/status/1131228223596060672?ref_src=twsrc%5Etfw">May 22, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1130479936656027648</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1130479257011007488</td> 
+     <td class="tg-0pky">2019-05-20 16:26:34.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Sei milioni di italiani vivono in siti contaminati dove la salute e l'ambiente non sono tutelati perciò L'Italia deve dichiarare <a href="https://twitter.com/hashtag/EmergenzaClimatica?src=hash&amp;ref_src=twsrc%5Etfw">#EmergenzaClimatica</a> <a href="https://twitter.com/hashtag/EuropaVerde?src=hash&amp;ref_src=twsrc%5Etfw">#EuropaVerde</a> <a href="https://twitter.com/hashtag/ToccaANoi?src=hash&amp;ref_src=twsrc%5Etfw">#ToccaANoi</a></p>— Fulvia Gravame (@fulviagr) 
+       <a href="https://twitter.com/fulviagr/status/1130479257011007488?ref_src=twsrc%5Etfw">May 20, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131558787075182592</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1131556486793093120</td> 
+     <td class="tg-0pky">2019-05-23 15:53:32.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il vostro affetto fa bene al cuore e alla salute! Domenica votate <a href="https://twitter.com/forza_italia?ref_src=twsrc%5Etfw">@forza_italia</a> per cambiare il Piemonte, l'Italia e l'Europa!<a href="https://twitter.com/Alberto_Cirio?ref_src=twsrc%5Etfw">@Alberto_Cirio</a> <a href="https://twitter.com/hashtag/CirioPresidente?src=hash&amp;ref_src=twsrc%5Etfw">#CirioPresidente</a> <a href="https://twitter.com/hashtag/ScriviBerlusconi?src=hash&amp;ref_src=twsrc%5Etfw">#ScriviBerlusconi</a> <a href="https://t.co/nw11sTm2ev">pic.twitter.com/nw11sTm2ev</a></p>— Silvio Berlusconi (@berlusconi) 
+       <a href="https://twitter.com/berlusconi/status/1131556486793093120?ref_src=twsrc%5Etfw">May 23, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1126842229396516867</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1126828797595136000</td> 
+     <td class="tg-0pky">2019-05-10 15:31:37.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il diritto alla salute deve essere garantito a tutti i cittadini, da nord a sud senza distinzione. <br>Sono al Policlinico Luigi Di Liegro, Roma. 🚑 <a href="https://t.co/snRBh1R8tB">pic.twitter.com/snRBh1R8tB</a></p>— Antonio Tajani (@Antonio_Tajani) 
+       <a href="https://twitter.com/Antonio_Tajani/status/1126828797595136000?ref_src=twsrc%5Etfw">May 10, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1130853355868176387</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-21 17:10:24.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">🔴 LIVE Comincia la Fase 2 del Governo del Cambiamento, <a href="https://twitter.com/GiuliaGrilloM5S?ref_src=twsrc%5Etfw">@GiuliaGrilloM5S</a>: "Non c'è salute senza legalità. E noi stiamo rimettendo al centro la legalità nel sistema sanitario"<br><br>Segui la diretta ▶️ <a href="https://t.co/6Ix6ht7tgm">https://t.co/6Ix6ht7tgm</a> <a href="https://twitter.com/hashtag/continuareXcambiare?src=hash&amp;ref_src=twsrc%5Etfw">#continuareXcambiare</a></p>— Movimento 5 Stelle (@Mov5Stelle) 
+       <a href="https://twitter.com/Mov5Stelle/status/1130853355868176387?ref_src=twsrc%5Etfw">May 21, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1089115481796005888</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-01-26 11:59:00.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">L’aria e la salute sono un bene comune! La lotta all’inquinamento e ai cambiamenti climatici non deve vederci divisi ma uniti. Per noi, per i nostri figli, per il nostro futuro.<br><br>Il post di <a href="https://twitter.com/GiuliaGrilloM5S?ref_src=twsrc%5Etfw">@GiuliaGrilloM5S</a> <a href="https://t.co/jvDWi1742n">https://t.co/jvDWi1742n</a></p>— Movimento 5 Stelle (@Mov5Stelle) 
+       <a href="https://twitter.com/Mov5Stelle/status/1089115481796005888?ref_src=twsrc%5Etfw">January 26, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131932077966995456</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1131931608674652160</td> 
+     <td class="tg-0pky">2019-05-24 16:36:52.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Cibi sani, liberi dai pesticidi, per la salute delle mamme e dei figli (ma anche dei papà, no?) <a href="https://twitter.com/hashtag/VoteForClimate?src=hash&amp;ref_src=twsrc%5Etfw">#VoteForClimate</a> <a href="https://twitter.com/hashtag/EuropaVerde?src=hash&amp;ref_src=twsrc%5Etfw">#EuropaVerde</a> <a href="https://t.co/NtJ8bFZSbN">https://t.co/NtJ8bFZSbN</a></p>— Monica Frassoni (@monicafrassoni) 
+       <a href="https://twitter.com/monicafrassoni/status/1131931608674652160?ref_src=twsrc%5Etfw">May 24, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131928033798049792</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1131927776532017153</td> 
+     <td class="tg-0pky">2019-05-24 16:20:48.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Aria pulita, acqua potabile pura e accessibile, cibo sano, sicuro e disponibile per tutti, salute propria e dei propri cari...tutto questo dipende dall'ambiente in cui viviamo e dal clima globale. Se pensi che queste siano le cose piú importanti <a href="https://twitter.com/hashtag/VoteForClimate?src=hash&amp;ref_src=twsrc%5Etfw">#VoteForClimate</a> <a href="https://twitter.com/hashtag/EuropaVerde?src=hash&amp;ref_src=twsrc%5Etfw">#EuropaVerde</a></p>— Vincenzo Pit (@PitVincenzo) 
+       <a href="https://twitter.com/PitVincenzo/status/1131927776532017153?ref_src=twsrc%5Etfw">May 24, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131925819863982080</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-24 16:12:00.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Cibi sani, liberi dai pesticidi, per la salute delle mamme e dei figli (ma anche dei papà, no?) <a href="https://twitter.com/hashtag/VoteForClimate?src=hash&amp;ref_src=twsrc%5Etfw">#VoteForClimate</a> <a href="https://twitter.com/hashtag/EuropaVerde?src=hash&amp;ref_src=twsrc%5Etfw">#EuropaVerde</a> <a href="https://t.co/7ndqyDS4ne">https://t.co/7ndqyDS4ne</a></p>— Europa Verde (@europaverde_it) 
+       <a href="https://twitter.com/europaverde_it/status/1131925819863982080?ref_src=twsrc%5Etfw">May 24, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131923740399493120</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1131923284830969863</td> 
+     <td class="tg-0pky">2019-05-24 16:03:44.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Cibi sani, liberi dai pesticidi, per la salute delle mamme e dei figli (ma anche dei papà, no?)<a href="https://twitter.com/hashtag/VoteForClimate?src=hash&amp;ref_src=twsrc%5Etfw">#VoteForClimate</a>&nbsp;<a href="https://twitter.com/hashtag/EuropaVerde?src=hash&amp;ref_src=twsrc%5Etfw">#EuropaVerde</a> <a href="https://t.co/hAgACEWQep">https://t.co/hAgACEWQep</a></p>— Matteo lanconelli (@MatteoLanconel2) 
+       <a href="https://twitter.com/MatteoLanconel2/status/1131923284830969863?ref_src=twsrc%5Etfw">May 24, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1111281951757996033</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1111281531132264450</td> 
+     <td class="tg-0pky">2019-03-28 16:00:38.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Oggi presentiamo le nuove azioni della <a href="https://twitter.com/RegioneLazio?ref_src=twsrc%5Etfw">@RegioneLazio</a> per le famiglie: nuovi servizi per il sociale, la salute e il lavoro. In Italia c’è chi vuole tornare indietro su conquiste e diritti, noi non lo permetteremo . Segui la diretta su Facebook: <a href="https://t.co/cfo7KhlVrT">https://t.co/cfo7KhlVrT</a> <a href="https://t.co/YLIbnwI79O">pic.twitter.com/YLIbnwI79O</a></p>— Nicola Zingaretti (@nzingaretti) 
+       <a href="https://twitter.com/nzingaretti/status/1111281531132264450?ref_src=twsrc%5Etfw">March 28, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1109062171156271104</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-03-22 13:00:01.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Di 42 discariche pericolose per la salute dei cittadini di <a href="https://twitter.com/hashtag/Basilicata?src=hash&amp;ref_src=twsrc%5Etfw">#Basilicata</a>, Puglia, Abruzzo e Campania (oltre a 2 del Friuli), che dovevano essere chiuse, gli amministratori del <a href="https://twitter.com/hashtag/Pd?src=hash&amp;ref_src=twsrc%5Etfw">#Pd</a> non sono riusciti a sanarne neppure una entro i termini stabiliti 😡<a href="https://t.co/WFkVSLzZcn">https://t.co/WFkVSLzZcn</a></p>— Movimento 5 Stelle (@Mov5Stelle) 
+       <a href="https://twitter.com/Mov5Stelle/status/1109062171156271104?ref_src=twsrc%5Etfw">March 22, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1085551154782765056</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1085544592823463936</td> 
+     <td class="tg-0pky">2019-01-16 15:55:38.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Noi non siamo quelli del NO. Siamo quelli del <a href="https://twitter.com/hashtag/SI?src=hash&amp;ref_src=twsrc%5Etfw">#SI</a>: al diritto alla <a href="https://twitter.com/hashtag/salute?src=hash&amp;ref_src=twsrc%5Etfw">#salute</a> garantito in tutto il <a href="https://twitter.com/hashtag/Paese?src=hash&amp;ref_src=twsrc%5Etfw">#Paese</a>, all’accesso alle cure da Nord a Sud, all’abbattimento delle liste d'attesa, al merito nelle nomine. La politica nella sanità? Questo è un NO.</p>— Giulia Grillo (@GiuliaGrilloM5S) 
+       <a href="https://twitter.com/GiuliaGrilloM5S/status/1085544592823463936?ref_src=twsrc%5Etfw">January 16, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131932518494687232</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1131932367222788098</td> 
+     <td class="tg-0pky">2019-05-24 16:38:37.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Cibi sani e liberi dai pesticidi, per la salute delle mamme e dei figli (ma anche dei papà, no?) <a href="https://twitter.com/hashtag/VoteForClimate?src=hash&amp;ref_src=twsrc%5Etfw">#VoteForClimate</a> <a href="https://twitter.com/hashtag/EuropaVerde?src=hash&amp;ref_src=twsrc%5Etfw">#EuropaVerde</a> <a href="https://t.co/ybSY4VM4wh">https://t.co/ybSY4VM4wh</a></p>— Gianfranco Mascia (@mascia_g) 
+       <a href="https://twitter.com/mascia_g/status/1131932367222788098?ref_src=twsrc%5Etfw">May 24, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1125807323140718592</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1125806631701352448</td> 
+     <td class="tg-0pky">2019-05-07 18:59:16.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">La buona politica è quella che risolve i problemi dei cittadini. Il tema della salute è una priorità dell'Ue. Sarebbe il caso di armonizzare le politiche sanitarie di tutti i paesi Ue. <a href="https://t.co/TYbwXYDh1T">pic.twitter.com/TYbwXYDh1T</a></p>— Antonio Tajani (@Antonio_Tajani) 
+       <a href="https://twitter.com/Antonio_Tajani/status/1125806631701352448?ref_src=twsrc%5Etfw">May 7, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1116454873598500868</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1116429834945814528</td> 
+     <td class="tg-0pky">2019-04-11 23:35:59.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Ma cosa c’entra con la politica deridere l’avversario per lo stato di salute? Cosa c’entra con la politica postare una foto che ritrae l’avversario sofferente per un malore? Questa non è politica, è barbarie. E’ una trovata di cattivissimo gusto. <a href="https://twitter.com/hashtag/vergognatevi?src=hash&amp;ref_src=twsrc%5Etfw">#vergognatevi</a> <a href="https://t.co/rvZk61i8dF">pic.twitter.com/rvZk61i8dF</a></p>— Benedetta Fiorini (@bennyfiorini) 
+       <a href="https://twitter.com/bennyfiorini/status/1116429834945814528?ref_src=twsrc%5Etfw">April 11, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1103325101049724929</td> 
+     <td class="tg-phtq">Piu_Europa</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-03-06 17:02:57.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Obbligo <a href="https://twitter.com/hashtag/vaccini?src=hash&amp;ref_src=twsrc%5Etfw">#vaccini</a> non è un capriccio, ma una precisa esigenza di salute pubblica che si è resa necessaria nel momento in cui le coperture vaccinali sono scese al di sotto della soglia indispensabile a garantire l’immunità di gregge anche a chi non può vaccinarsi. <a href="https://twitter.com/giordanomasini?ref_src=twsrc%5Etfw">@giordanomasini</a> <a href="https://t.co/K1ys1LnlTL">pic.twitter.com/K1ys1LnlTL</a></p>— Più Europa (@Piu_Europa) 
+       <a href="https://twitter.com/Piu_Europa/status/1103325101049724929?ref_src=twsrc%5Etfw">March 6, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1117323265515630593</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1117125361307979782</td> 
+     <td class="tg-0pky">2019-04-14 09:06:40.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">La <a href="https://twitter.com/hashtag/ValleDelSacco?src=hash&amp;ref_src=twsrc%5Etfw">#ValleDelSacco</a> non è solo una vertenza ma una grande sfida di democrazia che deve rimettere al centro l'ambiente, la salute, le cittadine ed i cittadini di questa provincia. <a href="https://twitter.com/europaverde_it?ref_src=twsrc%5Etfw">@europaverde_it</a> - <a href="https://twitter.com/PossibileIt?ref_src=twsrc%5Etfw">@PossibileIt</a> - <a href="https://twitter.com/verditalia?ref_src=twsrc%5Etfw">@verditalia</a> - <a href="https://twitter.com/europeangreens?ref_src=twsrc%5Etfw">@europeangreens</a>🌻 <a href="https://twitter.com/hashtag/LetsActTogether?src=hash&amp;ref_src=twsrc%5Etfw">#LetsActTogether</a> <a href="https://twitter.com/hashtag/BraveGreenEU?src=hash&amp;ref_src=twsrc%5Etfw">#BraveGreenEU</a> <a href="https://t.co/S7LPGuDmDS">pic.twitter.com/S7LPGuDmDS</a></p>— Gianmarco Capogna (@gmarcoc) 
+       <a href="https://twitter.com/gmarcoc/status/1117125361307979782?ref_src=twsrc%5Etfw">April 13, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131194685677035520</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1131190475598123008</td> 
+     <td class="tg-0pky">2019-05-22 15:46:44.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Garantire a tutti servizi sanitari di qualità. Uno dei problemi che mi sta particolarmente a cuore è la <a href="https://twitter.com/hashtag/Salute?src=hash&amp;ref_src=twsrc%5Etfw">#Salute</a> mentale degli adolescenti: l'<a href="https://twitter.com/hashtag/Europa?src=hash&amp;ref_src=twsrc%5Etfw">#Europa</a> deve investire di più e meglio per essere vicino alle <a href="https://twitter.com/hashtag/famiglie?src=hash&amp;ref_src=twsrc%5Etfw">#famiglie</a> <a href="https://twitter.com/hashtag/ElezioniEuropee2019?src=hash&amp;ref_src=twsrc%5Etfw">#ElezioniEuropee2019</a> <a href="https://twitter.com/hashtag/scrivipuglisi?src=hash&amp;ref_src=twsrc%5Etfw">#scrivipuglisi</a> <a href="https://t.co/ALcG0VrfJV">pic.twitter.com/ALcG0VrfJV</a></p>— Francesca Puglisi (@PuglisiPD) 
+       <a href="https://twitter.com/PuglisiPD/status/1131190475598123008?ref_src=twsrc%5Etfw">May 22, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1129077493368053760</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1129074756781793280</td> 
+     <td class="tg-0pky">2019-05-16 19:33:46.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Cassazione: Il saluto fascista è reato, no alla «lieve entità»<a href="https://t.co/gA2ViqxqVq">https://t.co/gA2ViqxqVq</a></p>— Roberto Antonini (@RANRoberto) 
+       <a href="https://twitter.com/RANRoberto/status/1129074756781793280?ref_src=twsrc%5Etfw">May 16, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1129812634096885760</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1129811222549938176</td> 
+     <td class="tg-0pky">2019-05-18 20:14:57.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il centrodestra è malato? Di certo quello più in salute nel centrodestra sono io! La nostra coalizione ha vinto tutte le elezioni amministrative e regionali da un anno a questa parte.<br><br>📺 <a href="https://twitter.com/hashtag/TG5?src=hash&amp;ref_src=twsrc%5Etfw">#TG5</a> <a href="https://twitter.com/hashtag/Canale5?src=hash&amp;ref_src=twsrc%5Etfw">#Canale5</a></p>— Silvio Berlusconi (@berlusconi) 
+       <a href="https://twitter.com/berlusconi/status/1129811222549938176?ref_src=twsrc%5Etfw">May 18, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131931270915739648</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1131931156142862337</td> 
+     <td class="tg-0pky">2019-05-24 16:33:39.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Domenica votiamo tutti per il clima, per il <a href="https://twitter.com/hashtag/futuro?src=hash&amp;ref_src=twsrc%5Etfw">#futuro</a>, per la <a href="https://twitter.com/hashtag/salute?src=hash&amp;ref_src=twsrc%5Etfw">#salute</a>, per il benessere, per i <a href="https://twitter.com/hashtag/diritti?src=hash&amp;ref_src=twsrc%5Etfw">#diritti</a>, per la <a href="https://twitter.com/hashtag/pace?src=hash&amp;ref_src=twsrc%5Etfw">#pace</a>, per la <a href="https://twitter.com/hashtag/legalit%C3%A0?src=hash&amp;ref_src=twsrc%5Etfw">#legalità</a>, per un’<a href="https://twitter.com/hashtag/Europa?src=hash&amp;ref_src=twsrc%5Etfw">#Europa</a> più forte e più verde, per <a href="https://twitter.com/europaverde_it?ref_src=twsrc%5Etfw">@europaverde_it</a> <a href="https://twitter.com/hashtag/VoteforClimate?src=hash&amp;ref_src=twsrc%5Etfw">#VoteforClimate</a> <a href="https://t.co/cRfmx0GsEO">pic.twitter.com/cRfmx0GsEO</a></p>— Elena Grandi (@Grandi_VERDI_IT) 
+       <a href="https://twitter.com/Grandi_VERDI_IT/status/1131931156142862337?ref_src=twsrc%5Etfw">May 24, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1115958400368742400</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-10 14:43:10.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Da 10 anni ai calabresi è negato il diritto alla <a href="https://twitter.com/hashtag/salute?src=hash&amp;ref_src=twsrc%5Etfw">#salute</a> mentre vengono loro imposte le <a href="https://twitter.com/hashtag/tasse?src=hash&amp;ref_src=twsrc%5Etfw">#tasse</a> più alte d'Italia. Ora il tanto sbandierato decreto sulla <a href="https://twitter.com/hashtag/sanit%C3%A0?src=hash&amp;ref_src=twsrc%5Etfw">#sanità</a> è incostituzionale <a href="https://twitter.com/GiuliaGrilloM5S?ref_src=twsrc%5Etfw">@GiuliaGrilloM5S</a> ?<a href="https://twitter.com/enzabrunobossio?ref_src=twsrc%5Etfw">@enzabrunobossio</a> <a href="https://t.co/3eZuSblYpX">https://t.co/3eZuSblYpX</a></p>— Partito Democratico 🇮🇹 🇪🇺 (@pdnetwork) 
+       <a href="https://twitter.com/pdnetwork/status/1115958400368742400?ref_src=twsrc%5Etfw">April 10, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1117047758131802112</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-13 14:51:53.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il saluto della Fondazione <a href="https://twitter.com/hashtag/AlleanzaNazionale?src=hash&amp;ref_src=twsrc%5Etfw">#AlleanzaNazionale</a> alla Conferenza Programmatica di <a href="https://twitter.com/hashtag/Fratelliditalia?src=hash&amp;ref_src=twsrc%5Etfw">#Fratelliditalia</a> in corso a <a href="https://twitter.com/hashtag/Torino?src=hash&amp;ref_src=twsrc%5Etfw">#Torino</a>.<br><br>Il 26 maggio <a href="https://twitter.com/hashtag/VotaItaliano?src=hash&amp;ref_src=twsrc%5Etfw">#VotaItaliano</a> in Europa per <a href="https://twitter.com/hashtag/CambiareTutto?src=hash&amp;ref_src=twsrc%5Etfw">#CambiareTutto</a>. <a href="https://t.co/47RWdnUdSa">pic.twitter.com/47RWdnUdSa</a></p>— Fratelli d'Italia 🇮🇹 (@FratellidItaIia) 
+       <a href="https://twitter.com/FratellidItaIia/status/1117047758131802112?ref_src=twsrc%5Etfw">April 13, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1117050846691373059</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-13 15:04:10.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">I saluti del Direttore del <a href="https://twitter.com/SecolodItalia1?ref_src=twsrc%5Etfw">@SecolodItalia1</a> Francesco <a href="https://twitter.com/Storace?ref_src=twsrc%5Etfw">@Storace</a> alla Conferenza Programmatica di <a href="https://twitter.com/hashtag/Fratelliditalia?src=hash&amp;ref_src=twsrc%5Etfw">#Fratelliditalia</a>.<br><br>Il 26 maggio <a href="https://twitter.com/hashtag/VotaItaliano?src=hash&amp;ref_src=twsrc%5Etfw">#VotaItaliano</a> in Europa per <a href="https://twitter.com/hashtag/CambiareTutto?src=hash&amp;ref_src=twsrc%5Etfw">#CambiareTutto</a> 🇮🇹 <a href="https://t.co/CiqJwRC659">pic.twitter.com/CiqJwRC659</a></p>— Fratelli d'Italia 🇮🇹 (@FratellidItaIia) 
+       <a href="https://twitter.com/FratellidItaIia/status/1117050846691373059?ref_src=twsrc%5Etfw">April 13, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1117125656150720512</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1117111198313525252</td> 
+     <td class="tg-0pky">2019-04-13 20:01:26.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il saluto di <a href="https://twitter.com/ZahradilJan?ref_src=twsrc%5Etfw">@ZahradilJan</a> alla Conferenza Programmatica di <a href="https://twitter.com/hashtag/Fratelliditalia?src=hash&amp;ref_src=twsrc%5Etfw">#Fratelliditalia</a>: "Insieme a <a href="https://twitter.com/GiorgiaMeloni?ref_src=twsrc%5Etfw">@GiorgiaMeloni</a> per riformare l'Europa".<a href="https://twitter.com/ACREurope?ref_src=twsrc%5Etfw">@ACREurope</a> <a href="https://twitter.com/hashtag/26maggio?src=hash&amp;ref_src=twsrc%5Etfw">#26maggio</a> <a href="https://twitter.com/hashtag/VotaItaliano?src=hash&amp;ref_src=twsrc%5Etfw">#VotaItaliano</a> <a href="https://twitter.com/hashtag/Cambiaretutto?src=hash&amp;ref_src=twsrc%5Etfw">#Cambiaretutto</a> <a href="https://t.co/O3YS9yQNwO">pic.twitter.com/O3YS9yQNwO</a></p>— Fratelli d'Italia 🇮🇹 (@FratellidItaIia) 
+       <a href="https://twitter.com/FratellidItaIia/status/1117111198313525252?ref_src=twsrc%5Etfw">April 13, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1117125371084845057</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1117051628182487045</td> 
+     <td class="tg-0pky">2019-04-13 20:00:18.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">I saluti del Direttore del <a href="https://twitter.com/SecolodItalia1?ref_src=twsrc%5Etfw">@SecolodItalia1</a> Francesco <a href="https://twitter.com/Storace?ref_src=twsrc%5Etfw">@Storace</a> alla Conferenza Programmatica di <a href="https://twitter.com/hashtag/Fratelliditalia?src=hash&amp;ref_src=twsrc%5Etfw">#Fratelliditalia</a>. Il 26 maggio <a href="https://twitter.com/hashtag/VotaItaliano?src=hash&amp;ref_src=twsrc%5Etfw">#VotaItaliano</a> in Europa per <a href="https://twitter.com/hashtag/CambiareTutto?src=hash&amp;ref_src=twsrc%5Etfw">#CambiareTutto</a> 🇮🇹 <a href="https://t.co/lOEX7kLplx">https://t.co/lOEX7kLplx</a></p>— Notizieinunclick🔝 (@Newsinunclick) 
+       <a href="https://twitter.com/Newsinunclick/status/1117051628182487045?ref_src=twsrc%5Etfw">April 13, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1117111198313525252</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-13 19:03:59.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il saluto di <a href="https://twitter.com/ZahradilJan?ref_src=twsrc%5Etfw">@ZahradilJan</a> alla Conferenza Programmatica di <a href="https://twitter.com/hashtag/Fratelliditalia?src=hash&amp;ref_src=twsrc%5Etfw">#Fratelliditalia</a>: "Insieme a <a href="https://twitter.com/GiorgiaMeloni?ref_src=twsrc%5Etfw">@GiorgiaMeloni</a> per riformare l'Europa".<a href="https://twitter.com/ACREurope?ref_src=twsrc%5Etfw">@ACREurope</a> <a href="https://twitter.com/hashtag/26maggio?src=hash&amp;ref_src=twsrc%5Etfw">#26maggio</a> <a href="https://twitter.com/hashtag/VotaItaliano?src=hash&amp;ref_src=twsrc%5Etfw">#VotaItaliano</a> <a href="https://twitter.com/hashtag/Cambiaretutto?src=hash&amp;ref_src=twsrc%5Etfw">#Cambiaretutto</a> <a href="https://t.co/O3YS9yQNwO">pic.twitter.com/O3YS9yQNwO</a></p>— Fratelli d'Italia 🇮🇹 (@FratellidItaIia) 
+       <a href="https://twitter.com/FratellidItaIia/status/1117111198313525252?ref_src=twsrc%5Etfw">April 13, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1109877403793399808</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1109787801174843393</td> 
+     <td class="tg-0pky">2019-03-24 18:59:28.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Partecipazione al congresso <a href="https://twitter.com/forza_italia?ref_src=twsrc%5Etfw">@forza_italia</a> <a href="https://twitter.com/hashtag/ForzaItalia?src=hash&amp;ref_src=twsrc%5Etfw">#ForzaItalia</a> provincia di Roma saluti con Massino Bevilacqua <a href="https://t.co/FdG9idjzaA">pic.twitter.com/FdG9idjzaA</a></p>— Maurizio Gasparri (@gasparripdl) 
+       <a href="https://twitter.com/gasparripdl/status/1109787801174843393?ref_src=twsrc%5Etfw">March 24, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1087663961741381632</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1087659885565743106</td> 
+     <td class="tg-0pky">2019-01-22 11:51:10.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Eccoci in diretta con la presentazione di <a href="https://twitter.com/hashtag/RedditoDiCittadinanza?src=hash&amp;ref_src=twsrc%5Etfw">#RedditoDiCittadinanza</a> e <a href="https://twitter.com/hashtag/Quota100?src=hash&amp;ref_src=twsrc%5Etfw">#Quota100</a>, con un simpatico saluto di <a href="https://twitter.com/hashtag/LinoBanfi?src=hash&amp;ref_src=twsrc%5Etfw">#LinoBanfi</a>. <a href="https://twitter.com/Mov5Stelle?ref_src=twsrc%5Etfw">@Mov5Stelle</a> 👇🏻<a href="https://t.co/0MBeuHL8hy">https://t.co/0MBeuHL8hy</a> <a href="https://t.co/cIbhk4TVMC">pic.twitter.com/cIbhk4TVMC</a></p>— Vittoria Baldino (@BaldinoVittoria) 
+       <a href="https://twitter.com/BaldinoVittoria/status/1087659885565743106?ref_src=twsrc%5Etfw">January 22, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1118100564326461440</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1118090751970369536</td> 
+     <td class="tg-0pky">2019-04-16 12:35:22.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">L’ultimo commosso saluto al maresciallo maggiore <a href="https://twitter.com/hashtag/DiGennaro?src=hash&amp;ref_src=twsrc%5Etfw">#DiGennaro</a>. Onori a lui, onore all’Arma dei <a href="https://twitter.com/_Carabinieri_?ref_src=twsrc%5Etfw">@_Carabinieri_</a> , baluardo di <a href="https://twitter.com/hashtag/legalit%C3%A0?src=hash&amp;ref_src=twsrc%5Etfw">#legalità</a> e di <a href="https://twitter.com/hashtag/sicurezza?src=hash&amp;ref_src=twsrc%5Etfw">#sicurezza</a>. Grazie per quello che fate ogni giorno. Siete l’orgoglio d’Italia. Ricordiamocelo sempre, non solo nei momenti di dolore. <a href="https://t.co/kU5xjddjxi">https://t.co/kU5xjddjxi</a></p>— Anna Maria Bernini (@BerniniAM) 
+       <a href="https://twitter.com/BerniniAM/status/1118090751970369536?ref_src=twsrc%5Etfw">April 16, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1105845494461460481</td> 
+     <td class="tg-phtq">Piu_Europa</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1105845347455250432</td> 
+     <td class="tg-0pky">2019-03-13 15:58:06.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Saluto con grande piacere la svolta pro-global e pro-commercio internazionale della <a href="https://twitter.com/hashtag/Lega?src=hash&amp;ref_src=twsrc%5Etfw">#Lega</a> con la <a href="https://twitter.com/hashtag/BeltAndRoadInitiative?src=hash&amp;ref_src=twsrc%5Etfw">#BeltAndRoadInitiative</a>. Spero che questo consenta di ratificare il <a href="https://twitter.com/hashtag/CETA?src=hash&amp;ref_src=twsrc%5Etfw">#CETA</a>. Spero anche che se bisogna usare soldi cinesi per il porto di Trieste, si usino soldi europei per fare la Tav <a href="https://t.co/fBJjz7xLiu">pic.twitter.com/fBJjz7xLiu</a></p>— BenedettoDellaVedova🇮🇹🇪🇺 (@bendellavedova) 
+       <a href="https://twitter.com/bendellavedova/status/1105845347455250432?ref_src=twsrc%5Etfw">March 13, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1129110550817005569</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1129077007315275776</td> 
+     <td class="tg-0pky">2019-05-16 21:45:07.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Per la <a href="https://twitter.com/hashtag/cassazione?src=hash&amp;ref_src=twsrc%5Etfw">#cassazione</a> il “Saluto fascista” è un reato ora si proceda di conseguenza <a href="https://twitter.com/Artventuno?ref_src=twsrc%5Etfw">@Artventuno</a> <a href="https://twitter.com/Anpinazionale?ref_src=twsrc%5Etfw">@Anpinazionale</a> <a href="https://twitter.com/PBerizzi?ref_src=twsrc%5Etfw">@PBerizzi</a> <a href="https://twitter.com/IlmioManifesto?ref_src=twsrc%5Etfw">@IlmioManifesto</a>.</p>— Beppe Giulietti (@BeppeGiulietti) 
+       <a href="https://twitter.com/BeppeGiulietti/status/1129077007315275776?ref_src=twsrc%5Etfw">May 16, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1119187830889226240</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1119179675203403777</td> 
+     <td class="tg-0pky">2019-04-19 12:35:47.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">In tantissimi per portare l’ultimo saluto a Massimo <a href="https://twitter.com/hashtag/Bordin?src=hash&amp;ref_src=twsrc%5Etfw">#Bordin</a>.<br>Quanto mancherà.<br>Non chiudete <a href="https://twitter.com/hashtag/RadioRadicale?src=hash&amp;ref_src=twsrc%5Etfw">#RadioRadicale</a>, ladri di democrazia. Non spegnete una seconda volta la sua voce. <a href="https://t.co/I7iIHIpupC">pic.twitter.com/I7iIHIpupC</a></p>— Luciano Nobili (@lucianonobili) 
+       <a href="https://twitter.com/lucianonobili/status/1119179675203403777?ref_src=twsrc%5Etfw">April 19, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1129765651072135168</td> 
+     <td class="tg-phtq">PartitComunista</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-18 17:08:15.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Porto i saluti del <a href="https://twitter.com/fgc_nazionale?ref_src=twsrc%5Etfw">@fgc_nazionale</a> . La gioventù è in prima linea nel sostenere il <a href="https://twitter.com/hashtag/PartitoComunista?src=hash&amp;ref_src=twsrc%5Etfw">#PartitoComunista</a>. Oggi i <a href="https://twitter.com/hashtag/giovani?src=hash&amp;ref_src=twsrc%5Etfw">#giovani</a> sono bombardati dalla propaganda europeista, ma la verità è che l'<a href="https://twitter.com/hashtag/Europa?src=hash&amp;ref_src=twsrc%5Etfw">#Europa</a> è la nostra nemica. Non c'è futuro per i giovani in <a href="https://twitter.com/hashtag/Europa?src=hash&amp;ref_src=twsrc%5Etfw">#Europa</a>. il 26 maggio <a href="https://twitter.com/hashtag/votacomunista?src=hash&amp;ref_src=twsrc%5Etfw">#votacomunista</a> <a href="https://t.co/ysQ87VCRam">pic.twitter.com/ysQ87VCRam</a></p>— PARTITO COMUNISTA ☭ ‏ (@PartitComunista) 
+       <a href="https://twitter.com/PartitComunista/status/1129765651072135168?ref_src=twsrc%5Etfw">May 18, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1115195641532121088</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1115119257258532865</td> 
+     <td class="tg-0pky">2019-04-08 12:12:14.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Saluto romano a scuola: studenti sospesi e "puniti" con lezioni su leggi razziali, Resistenza, migranti. Succede a Cuneo. Ogni tanto una buona notizia.</p>— tonino scala (@toninoscala) 
+       <a href="https://twitter.com/toninoscala/status/1115119257258532865?ref_src=twsrc%5Etfw">April 8, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1097922632769511426</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1097907640670265351</td> 
+     <td class="tg-0pky">2019-02-19 19:15:28.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il giustizialista <a href="https://twitter.com/hashtag/Giarrusso?src=hash&amp;ref_src=twsrc%5Etfw">#Giarrusso</a>, senatore del Movimento 5 Stelle, saluta così i <a href="https://twitter.com/SenatoriPD?ref_src=twsrc%5Etfw">@SenatoriPD</a>. Lui, che poco prima aveva salvato <a href="https://twitter.com/hashtag/Salvini?src=hash&amp;ref_src=twsrc%5Etfw">#Salvini</a> dal processo. Giustizia e onestà a intermittenza. <a href="https://twitter.com/hashtag/SalvaSalvini?src=hash&amp;ref_src=twsrc%5Etfw">#SalvaSalvini</a> <a href="https://t.co/fZd8kV1cN3">pic.twitter.com/fZd8kV1cN3</a></p>— PD Milano (@PdMilano) 
+       <a href="https://twitter.com/PdMilano/status/1097907640670265351?ref_src=twsrc%5Etfw">February 19, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1121857991299538945</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1121840536917299200</td> 
+     <td class="tg-0pky">2019-04-26 21:26:02.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Per tutti coloro che vorranno portare un ultimo saluto al Maestro Giovannino Battisti, i funerali saranno celebrati domani mattina, sabato 27 aprile, alle ore 11 nella Chiesa della Madonna del Rosario in Roviano. <a href="https://t.co/cIlgoS5CT9">https://t.co/cIlgoS5CT9</a></p>— Marco Silvestroni (@Silvestroninews) 
+       <a href="https://twitter.com/Silvestroninews/status/1121840536917299200?ref_src=twsrc%5Etfw">April 26, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1117068524273401856</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1117067429945810945</td> 
+     <td class="tg-0pky">2019-04-13 16:14:24.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il saluto di Mugnai: “Fondazione An e FdI hanno un comune destino” <a href="https://t.co/VY18yyfJAS">https://t.co/VY18yyfJAS</a> <a href="https://t.co/xoRKyW4X0s">pic.twitter.com/xoRKyW4X0s</a></p>— Secolo d'Italia (@SecolodItalia1) 
+       <a href="https://twitter.com/SecolodItalia1/status/1117067429945810945?ref_src=twsrc%5Etfw">April 13, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1124356234981904384</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-03 18:53:10.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr"><a href="https://twitter.com/Antonio_Tajani?ref_src=twsrc%5Etfw">@Antonio_Tajani</a>: Rivolgiamo un grande saluto al Presidente Berlusconi. Sta benissimo e presto sarà di nuovo in campo insieme a noi per concludere la campagna elettorale. <a href="https://twitter.com/hashtag/PerContareInEuropa?src=hash&amp;ref_src=twsrc%5Etfw">#PerContareInEuropa</a></p>— Forza Italia (@forza_italia) 
+       <a href="https://twitter.com/forza_italia/status/1124356234981904384?ref_src=twsrc%5Etfw">May 3, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1117061066289184768</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1117060634816815104</td> 
+     <td class="tg-0pky">2019-04-13 15:44:46.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">I saluti di Storace alla platea del Lingotto: “Il Secolo è strategico per Fratelli d’Italia” (video) <a href="https://t.co/k4s3OTc8Gw">https://t.co/k4s3OTc8Gw</a> <a href="https://t.co/Ln9dmk6i6T">pic.twitter.com/Ln9dmk6i6T</a></p>— Secolo d'Italia (@SecolodItalia1) 
+       <a href="https://twitter.com/SecolodItalia1/status/1117060634816815104?ref_src=twsrc%5Etfw">April 13, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1123625397021810688</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1123592664077742081</td> 
+     <td class="tg-0pky">2019-05-01 18:29:05.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il mio saluto al grande popolo di <a href="https://twitter.com/FratellidItaIia?ref_src=twsrc%5Etfw">@FratellidItaIia</a> oggi a <a href="https://twitter.com/hashtag/Jesolo?src=hash&amp;ref_src=twsrc%5Etfw">#Jesolo</a> per lo <a href="https://twitter.com/hashtag/sConcerto?src=hash&amp;ref_src=twsrc%5Etfw">#sConcerto</a> del <a href="https://twitter.com/hashtag/1maggio?src=hash&amp;ref_src=twsrc%5Etfw">#1maggio</a>!!!! Andiamo in <a href="https://twitter.com/hashtag/Europa?src=hash&amp;ref_src=twsrc%5Etfw">#Europa</a> per <a href="https://twitter.com/hashtag/cambiaretutto?src=hash&amp;ref_src=twsrc%5Etfw">#cambiaretutto</a> e far sentire la voce dell'<a href="https://twitter.com/hashtag/Italia?src=hash&amp;ref_src=twsrc%5Etfw">#Italia</a> con <a href="https://twitter.com/GiorgiaMeloni?ref_src=twsrc%5Etfw">@GiorgiaMeloni</a> <a href="https://twitter.com/RaffaeleFitto?ref_src=twsrc%5Etfw">@RaffaeleFitto</a> <a href="https://twitter.com/ecrgroup?ref_src=twsrc%5Etfw">@ecrgroup</a> <a href="https://t.co/PsvcCUHrFM">pic.twitter.com/PsvcCUHrFM</a></p>— Remo Sernagiotto (@SernagiottoRemo) 
+       <a href="https://twitter.com/SernagiottoRemo/status/1123592664077742081?ref_src=twsrc%5Etfw">May 1, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131292998791307265</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-22 22:17:23.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">🎭 Tutto pronto a <a href="https://twitter.com/hashtag/Roma?src=hash&amp;ref_src=twsrc%5Etfw">#Roma</a> per <a href="https://twitter.com/GiobbeTweets?ref_src=twsrc%5Etfw">@GiobbeTweets</a><br><br>In attesa dello spettacolo, il saluto dei candidati per l'Italia Centrale <a href="https://twitter.com/NandoBonessio?ref_src=twsrc%5Etfw">@NandoBonessio</a>, <a href="https://twitter.com/arcarcea?ref_src=twsrc%5Etfw">@arcarcea</a>, <a href="https://twitter.com/bengasibattisti?ref_src=twsrc%5Etfw">@bengasibattisti</a> e Mario Canino.<a href="https://twitter.com/hashtag/AgireOra?src=hash&amp;ref_src=twsrc%5Etfw">#AgireOra</a> <a href="https://twitter.com/hashtag/VoteForClimate?src=hash&amp;ref_src=twsrc%5Etfw">#VoteForClimate</a> <a href="https://t.co/CKw9U3xfS7">pic.twitter.com/CKw9U3xfS7</a></p>— Europa Verde (@europaverde_it) 
+       <a href="https://twitter.com/europaverde_it/status/1131292998791307265?ref_src=twsrc%5Etfw">May 22, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1103661314097012737</td> 
+     <td class="tg-phtq">PartSocialista</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1103661219242827779</td> 
+     <td class="tg-0pky">2019-03-07 15:18:56.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Stamane un cordiale saluto con Frans Timmermans, candidato del PSE al vertice dell'Unione Europea, e la condivisione che l'Europa si salva solo cambiandola profondamente partendo da investimenti, lavoro e conoscenza.</p>— Riccardo Nencini (@NenciniPsi) 
+       <a href="https://twitter.com/NenciniPsi/status/1103661219242827779?ref_src=twsrc%5Etfw">March 7, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1114830246925221888</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1114824146565857280</td> 
+     <td class="tg-0pky">2019-04-07 12:00:18.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il saluto del segretario del <a href="https://twitter.com/pdnetwork?ref_src=twsrc%5Etfw">@pdnetwork</a> <a href="https://twitter.com/nzingaretti?ref_src=twsrc%5Etfw">@nzingaretti</a> “Potete rappresentare e siete parte di un <a href="https://twitter.com/hashtag/PD?src=hash&amp;ref_src=twsrc%5Etfw">#PD</a> <a href="https://twitter.com/hashtag/aperto?src=hash&amp;ref_src=twsrc%5Etfw">#aperto</a> che deve impedire a questa destra di continuare a vincere”.<a href="https://twitter.com/hashtag/Harambee?src=hash&amp;ref_src=twsrc%5Etfw">#Harambee</a> <a href="https://t.co/dVhwH3ojM5">pic.twitter.com/dVhwH3ojM5</a></p>— Matteo Richetti (@MatteoRichetti) 
+       <a href="https://twitter.com/MatteoRichetti/status/1114824146565857280?ref_src=twsrc%5Etfw">April 7, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1130480797495058433</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1130480707237756929</td> 
+     <td class="tg-0pky">2019-05-20 16:30:00.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">L'Italia dichiari l'<a href="https://twitter.com/hashtag/EmergenzaClimatica?src=hash&amp;ref_src=twsrc%5Etfw">#EmergenzaClimatica</a> subito. Sarà un segno di civiltà, di attenzione alle generazioni future e alla salute di tutti. <a href="https://twitter.com/hashtag/EuropaVerde?src=hash&amp;ref_src=twsrc%5Etfw">#EuropaVerde</a> <a href="https://t.co/pW1cwHl0ZS">https://t.co/pW1cwHl0ZS</a></p>— Elisabetta Confaloni (@Elishebac) 
+       <a href="https://twitter.com/Elishebac/status/1130480707237756929?ref_src=twsrc%5Etfw">May 20, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1129692603308564481</td> 
+     <td class="tg-phtq">LegaSalvini</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1129687136930807808</td> 
+     <td class="tg-0pky">2019-05-18 12:17:59.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr"><a href="https://twitter.com/matteosalvinimi?ref_src=twsrc%5Etfw">@matteosalvinimi</a> :” Lavori in corso a Milano in piazza Duomo, vi aspetto tutti qui oggi alle 15: arriviamo! Un saluto alle migliaia di persone in viaggio!😊<br>Se avete Twitter, riempiamo con:<a href="https://twitter.com/hashtag/26maggiovotoLega?src=hash&amp;ref_src=twsrc%5Etfw">#26maggiovotoLega</a>🇮🇹 “ <a href="https://twitter.com/Noiconsalvini?ref_src=twsrc%5Etfw">@Noiconsalvini</a> <a href="https://twitter.com/LegaSalvini?ref_src=twsrc%5Etfw">@LegaSalvini</a> <a href="https://t.co/FbqAkWArBW">pic.twitter.com/FbqAkWArBW</a></p>— Fabio Cantarella (@fabiocantarel) 
+       <a href="https://twitter.com/fabiocantarel/status/1129687136930807808?ref_src=twsrc%5Etfw">May 18, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131243408817905667</td> 
+     <td class="tg-phtq">Piu_Europa</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1131243235077173249</td> 
+     <td class="tg-0pky">2019-05-22 19:00:20.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il saluto di <a href="https://twitter.com/hashtag/Bologna?src=hash&amp;ref_src=twsrc%5Etfw">#Bologna</a> e dell'Emilia Romagna a <a href="https://twitter.com/ItaliainComune?ref_src=twsrc%5Etfw">@ItaliainComune</a> e <a href="https://twitter.com/Piu_Europa?ref_src=twsrc%5Etfw">@Piu_Europa</a> è caloroso. Oggi siamo in tanti e si respira entusiasmo! Il sogno è sempre il medesimo: un'Italia forte in un'Europa unita. Noi ci siamo <a href="https://twitter.com/hashtag/ScriviPizzarotti?src=hash&amp;ref_src=twsrc%5Etfw">#ScriviPizzarotti</a> <a href="https://twitter.com/hashtag/nordest?src=hash&amp;ref_src=twsrc%5Etfw">#nordest</a> <a href="https://t.co/uczXGopDAL">pic.twitter.com/uczXGopDAL</a></p>— Federico Pizzarotti (@FedePizzarotti) 
+       <a href="https://twitter.com/FedePizzarotti/status/1131243235077173249?ref_src=twsrc%5Etfw">May 22, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1123591822629113857</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1123587935436193792</td> 
+     <td class="tg-0pky">2019-05-01 16:15:40.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Un saluto da Jesolo. Ci vediamo dalle 16.30 in piazza Marconi per lo <a href="https://twitter.com/hashtag/sConcerto?src=hash&amp;ref_src=twsrc%5Etfw">#sConcerto</a> del Primo Maggio! <a href="https://t.co/dvH3VC9aoD">pic.twitter.com/dvH3VC9aoD</a></p>— Giorgia Meloni 🇮🇹 ن (@GiorgiaMeloni) 
+       <a href="https://twitter.com/GiorgiaMeloni/status/1123587935436193792?ref_src=twsrc%5Etfw">May 1, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1121748357821677570</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1121467551970623493</td> 
+     <td class="tg-0pky">2019-04-26 14:10:24.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Un saluto ai neofascisti di Casa Pound Puglia che qualche mese fa ci hanno aggredito a Bari. <br>Grazie alla mobilitazione la loro sede è stata chiusa e ora devono passare il <a href="https://twitter.com/hashtag/25aprile?src=hash&amp;ref_src=twsrc%5Etfw">#25aprile</a> senza un posto in cui nascondersi.<br>Facciamo che il prossimo anno le abbiamo fatte chiedere tutte?</p>— Claudio Riccio (@claudioriccio) 
+       <a href="https://twitter.com/claudioriccio/status/1121467551970623493?ref_src=twsrc%5Etfw">April 25, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1129110724717043715</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1129079973199994880</td> 
+     <td class="tg-0pky">2019-05-16 21:45:49.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Confermata in via definitiva la condanna di un fascista per aver fatto il saluto romano. Il condannato si era difeso dicendo che si trattava di fatto lieve. La Cassazione ha detto che inneggiare al fascismo è contrario ai valori della democrazia è non ha nulla di “lieve”.</p>— Gianrico Carofiglio (@GianricoCarof) 
+       <a href="https://twitter.com/GianricoCarof/status/1129079973199994880?ref_src=twsrc%5Etfw">May 16, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1121352185072295936</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1121305549621157888</td> 
+     <td class="tg-0pky">2019-04-25 11:56:09.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Buon 25 aprile. Ciao, partigiano Johnny, è la tua festa, goditela. Saluta anche Milton e gli altri. <br>In gamba, che servite ancora<a href="https://twitter.com/hashtag/25aprile?src=hash&amp;ref_src=twsrc%5Etfw">#25aprile</a> <a href="https://t.co/yhRqxqyWZ4">pic.twitter.com/yhRqxqyWZ4</a></p>— Alessandro Robecchi (@AlRobecchi) 
+       <a href="https://twitter.com/AlRobecchi/status/1121305549621157888?ref_src=twsrc%5Etfw">April 25, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1119602483565867008</td> 
+     <td class="tg-phtq">PartitComunista</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1119549410579447808</td> 
+     <td class="tg-0pky">2019-04-20 16:03:27.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Siamo a <a href="https://twitter.com/hashtag/Madrid?src=hash&amp;ref_src=twsrc%5Etfw">#Madrid</a> per portare i saluti del FGC al XIV Congresso della <a href="https://twitter.com/hashtag/UJCE?src=hash&amp;ref_src=twsrc%5Etfw">#UJCE</a>. «Uniamo la <a href="https://twitter.com/hashtag/gioventu?src=hash&amp;ref_src=twsrc%5Etfw">#gioventu</a> proletaria di tutti i paesi nella lotta contro la <a href="https://twitter.com/hashtag/UE?src=hash&amp;ref_src=twsrc%5Etfw">#UE</a>, contro il capitalismo, per un <a href="https://twitter.com/hashtag/futuro?src=hash&amp;ref_src=twsrc%5Etfw">#futuro</a> diverso dall’ingiustizia e dallo sfruttamento». <a href="https://t.co/6Chg0OKAvX">pic.twitter.com/6Chg0OKAvX</a></p>— FGC ☭ (@fgc_nazionale) 
+       <a href="https://twitter.com/fgc_nazionale/status/1119549410579447808?ref_src=twsrc%5Etfw">April 20, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1116989322736148480</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1116980328189571072</td> 
+     <td class="tg-0pky">2019-04-13 10:59:41.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Un caro saluto agli utenti con strani nomi tipo marco55744885 o pablo85547524 che ci seguono sempre e che con i loro sagaci commenti ci tengono compagnia ogni giorno. Buone cose anche a voi ❤️</p>— Mediterranea Saving Humans (@RescueMed) 
+       <a href="https://twitter.com/RescueMed/status/1116980328189571072?ref_src=twsrc%5Etfw">April 13, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+  </table> 
+  <p>Sorting function from <a target="_blank" href="https://stackoverflow.com/a/49041392">here</a></p>  
+ </body>
+</html>

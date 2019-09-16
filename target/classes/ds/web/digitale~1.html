@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>Dibattito Scienza</title> 
+  <style type="text/css">
+        table {table-layout: fixed; width: 100%;}
+        .tg  {border-collapse:collapse;border-spacing:0;border-color:#9ABAD9;}
+        .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#9ABAD9;color:#444;background-color:#EBF5FF;}
+        .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#9ABAD9;color:#fff;background-color:#409cff;cursor: pointer;}
+        .tg .tg-phtq{background-color:#D2E4FC;border-color:inherit;text-align:left;vertical-align:top}
+        .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+
+    </style> 
+  <script>
+        window.onload=function() {
+            const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
+
+            const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
+                    v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+            )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+
+            // do the work...
+            document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
+                const table = th.closest('table');
+                console.log(table.querySelectorAll("tbody:nth-child(n+2) tr"));
+                Array.from(table.querySelectorAll('tbody:nth-child(n+2) tr'))
+                    .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
+                    .forEach(tr => {
+                        const tbody = document.createElement("tbody");
+                        tbody.appendChild(tr);
+                        table.appendChild(tbody)
+                    });
+            })));
+        }
+    </script> 
+ </head> 
+ <body> 
+  <h1>Dibattito Scienza</h1> 
+  <h2>Click on the column headers to sort the rows.</h2> 
+  <h2>Clicca sulle intestazioni delle colonne per ordinare le righe.</h2> 
+  <table class="tg" id="my-table"> 
+   <tbody>
+    <tr> 
+     <th class="tg-0pky">TweetID 👈</th> 
+     <th class="tg-0pky">UserName 👈</th> 
+     <th class="tg-0pky">InReplyID 👈</th> 
+     <th class="tg-0pky">RetweetId 👈</th> 
+     <th class="tg-0pky">DateTime 👈</th> 
+     <!--<th class="tg-0pky">Url 👈</th>--> 
+     <!-- <th class="tg-0pky">Topic 👈</th> --> 
+     <th class="tg-0pky" style="width: 230.4px;">Text 👈</th> 
+    </tr> 
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1100817842361040898</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-02-27 19:00:00.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">La cittadinanza digitale è l’appartenza al terzo spazio della nostra vita che è lo spazio digitale. La cittadinanza digitale è anche l’insieme di diritti e obblighi che ogni cittadino deve conoscere ed essere in grado di esercitare.<a href="https://t.co/OQPyHKb9ZO">https://t.co/OQPyHKb9ZO</a></p>— Movimento 5 Stelle (@Mov5Stelle) 
+       <a href="https://twitter.com/Mov5Stelle/status/1100817842361040898?ref_src=twsrc%5Etfw">February 27, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1111916519418675200</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-03-30 10:02:11.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Fai conoscere a tutti il nuovo gazebo digitale per le <a href="https://twitter.com/hashtag/ElezioniEuropee?src=hash&amp;ref_src=twsrc%5Etfw">#ElezioniEuropee</a> <a href="https://twitter.com/hashtag/ItaliaSvegliati?src=hash&amp;ref_src=twsrc%5Etfw">#ItaliaSvegliati</a> <a href="https://twitter.com/hashtag/30Marzo?src=hash&amp;ref_src=twsrc%5Etfw">#30Marzo</a> <a href="https://t.co/20JgPArrUi">pic.twitter.com/20JgPArrUi</a></p>— Forza Italia (@forza_italia) 
+       <a href="https://twitter.com/forza_italia/status/1111916519418675200?ref_src=twsrc%5Etfw">March 30, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1126852822795018240</td> 
+     <td class="tg-phtq">partitopirata</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1126846882800648198</td> 
+     <td class="tg-0pky">2019-05-10 16:13:43.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr"><a href="https://twitter.com/hashtag/Europee2019?src=hash&amp;ref_src=twsrc%5Etfw">#Europee2019</a> "vogliamo portare il tema dell'economia digitale sul dibattito pubblico" Diana Bargu candidata <a href="https://twitter.com/partitopirata?ref_src=twsrc%5Etfw">@partitopirata</a></p>— Michele Pinassi (@michele_pinassi) 
+       <a href="https://twitter.com/michele_pinassi/status/1126846882800648198?ref_src=twsrc%5Etfw">May 10, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1112265587370217472</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1112031348854804481</td> 
+     <td class="tg-0pky">2019-03-31 10:09:15.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">🔴 LIVE | <a href="https://twitter.com/hashtag/Rousseau?src=hash&amp;ref_src=twsrc%5Etfw">#Rousseau</a> CityLab Genova<br><br>Davide Casaleggio, Presidente dell'<a href="https://twitter.com/Rousseau_OS?ref_src=twsrc%5Etfw">@Rousseau_OS</a> "Giustizia e cittadinanza digitale. Nuovi paradigmi per il futuro."<br><br>Collegatevi ▶️ <a href="https://t.co/Y5DfS2gKlv">https://t.co/Y5DfS2gKlv</a> <a href="https://t.co/C2fYt354Pb">pic.twitter.com/C2fYt354Pb</a></p>— Associazione Rousseau (@Rousseau_OS) 
+       <a href="https://twitter.com/Rousseau_OS/status/1112031348854804481?ref_src=twsrc%5Etfw">March 30, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1124418125418647553</td> 
+     <td class="tg-phtq">partitopirata</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1124404223771402243</td> 
+     <td class="tg-0pky">2019-05-03 22:59:06.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="de" dir="ltr">Europa braucht digitale Freiheitskämpfer dringender denn je!<a href="https://twitter.com/echo_pbreyer?ref_src=twsrc%5Etfw">@echo_pbreyer</a> zum <a href="https://twitter.com/hashtag/Europatag?src=hash&amp;ref_src=twsrc%5Etfw">#Europatag</a> – auch in <a href="https://twitter.com/hashtag/D%C3%BCsseldorf?src=hash&amp;ref_src=twsrc%5Etfw">#Düsseldorf</a>: Viele Bürger vertrauen der <a href="https://twitter.com/hashtag/EU?src=hash&amp;ref_src=twsrc%5Etfw">#EU</a> nicht mehr &amp; <a href="https://twitter.com/hashtag/Europa?src=hash&amp;ref_src=twsrc%5Etfw">#Europa</a> ist sozial zutiefst gespalten zwischen Arm und Reich. Wir <a href="https://twitter.com/hashtag/PIRATEN?src=hash&amp;ref_src=twsrc%5Etfw">#PIRATEN</a> sagen dem Lobbyparadies Brüssel den Kampf an. <a href="https://t.co/a6U0MceZ50">pic.twitter.com/a6U0MceZ50</a></p>— Piratenpartei Düsseldorf (@PiratenDdorf) 
+       <a href="https://twitter.com/PiratenDdorf/status/1124404223771402243?ref_src=twsrc%5Etfw">May 3, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1116064300043505665</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1116015815839637506</td> 
+     <td class="tg-0pky">2019-04-10 21:43:59.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Ho partecipato al convegno "La <a href="https://twitter.com/hashtag/famiglia?src=hash&amp;ref_src=twsrc%5Etfw">#famiglia</a> nell'era digitale". Nel mio intervento, ho ribadito l'impegno di <a href="https://twitter.com/FratellidItaIia?ref_src=twsrc%5Etfw">@FratellidItaIia</a> nell'attuazione di politiche volte alla tutela della famiglia, ponendo l'accento sulla difesa dei più piccoli, nell'era del <a href="https://twitter.com/hashtag/cyberbullismo?src=hash&amp;ref_src=twsrc%5Etfw">#cyberbullismo</a>. <a href="https://t.co/m4zeCC7chf">pic.twitter.com/m4zeCC7chf</a></p>— Carolina Varchi 🇮🇹 (@CarolinaVarchi) 
+       <a href="https://twitter.com/CarolinaVarchi/status/1116015815839637506?ref_src=twsrc%5Etfw">April 10, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1111932678847242241</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1111931547932901376</td> 
+     <td class="tg-0pky">2019-03-30 11:06:24.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Fai conoscere a tutti il nuovo gazebo digitale per le <a href="https://twitter.com/hashtag/ElezioniEuropee?src=hash&amp;ref_src=twsrc%5Etfw">#ElezioniEuropee</a> <a href="https://twitter.com/hashtag/ItaliaSvegliati?src=hash&amp;ref_src=twsrc%5Etfw">#ItaliaSvegliati</a> <a href="https://twitter.com/hashtag/30Marzo?src=hash&amp;ref_src=twsrc%5Etfw">#30Marzo</a> <a href="https://t.co/naIpVHEoi4">pic.twitter.com/naIpVHEoi4</a></p>— Generazione Azzurra (@iberlusconiani) 
+       <a href="https://twitter.com/iberlusconiani/status/1111931547932901376?ref_src=twsrc%5Etfw">March 30, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131608310300446721</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1131446555427397632</td> 
+     <td class="tg-0pky">2019-05-23 19:10:20.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Ci vediamo dalle 09.30 su <a href="https://twitter.com/hashtag/Tele4?src=hash&amp;ref_src=twsrc%5Etfw">#Tele4</a> <a href="https://twitter.com/hashtag/TeleQuattro?src=hash&amp;ref_src=twsrc%5Etfw">#TeleQuattro</a> a <a href="https://twitter.com/hashtag/SvegliaTrieste?src=hash&amp;ref_src=twsrc%5Etfw">#SvegliaTrieste</a> canale 17 digitale terrestre <a href="https://twitter.com/hashtag/FVG?src=hash&amp;ref_src=twsrc%5Etfw">#FVG</a><a href="https://twitter.com/hashtag/Eu2019?src=hash&amp;ref_src=twsrc%5Etfw">#Eu2019</a> <a href="https://twitter.com/hashtag/cambiamotutto?src=hash&amp;ref_src=twsrc%5Etfw">#cambiamotutto</a> <a href="https://twitter.com/hashtag/FdI?src=hash&amp;ref_src=twsrc%5Etfw">#FdI</a> <a href="https://twitter.com/Telequattro?ref_src=twsrc%5Etfw">@Telequattro</a> <a href="https://twitter.com/FratellidItaIia?ref_src=twsrc%5Etfw">@FratellidItaIia</a> <a href="https://t.co/NlPDyeiVHX">pic.twitter.com/NlPDyeiVHX</a></p>— walter rizzetto (@w_rizzetto) 
+       <a href="https://twitter.com/w_rizzetto/status/1131446555427397632?ref_src=twsrc%5Etfw">May 23, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1104668321629253632</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1104442406823493633</td> 
+     <td class="tg-0pky">2019-03-10 10:00:26.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">La Cittadinanza Digitale è diventata un imperativo! <a href="https://twitter.com/gparagone?ref_src=twsrc%5Etfw">@gparagone</a> <a href="https://twitter.com/hashtag/RousseauEuropa?src=hash&amp;ref_src=twsrc%5Etfw">#RousseauEuropa</a> <br>Seguiteci in diretta ➡️ <a href="https://t.co/8xFjLNpASX">https://t.co/8xFjLNpASX</a> <a href="https://t.co/b3RIsR1EVj">pic.twitter.com/b3RIsR1EVj</a></p>— Associazione Rousseau (@Rousseau_OS) 
+       <a href="https://twitter.com/Rousseau_OS/status/1104442406823493633?ref_src=twsrc%5Etfw">March 9, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1121837039006121985</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1121798816334671874</td> 
+     <td class="tg-0pky">2019-04-26 20:02:47.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Entra su <a href="https://t.co/qv1Sos8Fhh">https://t.co/qv1Sos8Fhh</a>, il gazebo digitale della campagna elettorale di <a href="https://twitter.com/forza_italia?ref_src=twsrc%5Etfw">@forza_italia</a>. Grafiche, video, programmi e tanti altri contenuti per far conoscere le nostre proposte. <br>Cosa aspetti? 😉🇮🇹 <a href="https://t.co/8MyUa1oDeD">pic.twitter.com/8MyUa1oDeD</a></p>— Elisabetta Ripani (@BettaRipani) 
+       <a href="https://twitter.com/BettaRipani/status/1121798816334671874?ref_src=twsrc%5Etfw">April 26, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1116031274127384576</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1116013509559619590</td> 
+     <td class="tg-0pky">2019-04-10 19:32:45.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">'La famiglia nell'era digitale': oggi sono intervenuta per ribadire l'importanza della mia legge sulla videosorveglianza. Una legge che vuole rendere più sicura la vita di bambini, anziani e disabili. Nessun grande fratello, solo una battaglia di civiltà. <a href="https://t.co/1WiQKRgcZj">pic.twitter.com/1WiQKRgcZj</a></p>— Annagrazia Calabria (@CalabriaTw) 
+       <a href="https://twitter.com/CalabriaTw/status/1116013509559619590?ref_src=twsrc%5Etfw">April 10, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1128040771742044160</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1127972584887287810</td> 
+     <td class="tg-0pky">2019-05-13 22:54:12.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Domani ore 15 conferenza stampa su <a href="https://twitter.com/hashtag/madeinItaly?src=hash&amp;ref_src=twsrc%5Etfw">#madeinItaly</a> e Innovazione Digitale nelle <a href="https://twitter.com/hashtag/Pmi?src=hash&amp;ref_src=twsrc%5Etfw">#Pmi</a>. <a href="https://twitter.com/forza_italia?ref_src=twsrc%5Etfw">@forza_italia</a> presenta proposta su piattaforma digitale europea in stabilimenti <a href="https://twitter.com/hashtag/olivetti?src=hash&amp;ref_src=twsrc%5Etfw">#olivetti</a> di <a href="https://twitter.com/hashtag/Ivrea?src=hash&amp;ref_src=twsrc%5Etfw">#Ivrea</a>. Con <a href="https://twitter.com/VirginiaTirabo1?ref_src=twsrc%5Etfw">@VirginiaTirabo1</a> <a href="https://twitter.com/BerniniAM?ref_src=twsrc%5Etfw">@BerniniAM</a> <a href="https://twitter.com/LucioMalan?ref_src=twsrc%5Etfw">@LucioMalan</a> <a href="https://twitter.com/StefanoSertoli?ref_src=twsrc%5Etfw">@StefanoSertoli</a>. <a href="https://twitter.com/SenatoStampa?ref_src=twsrc%5Etfw">@SenatoStampa</a> <a href="https://twitter.com/berlusconi?ref_src=twsrc%5Etfw">@berlusconi</a> <a href="https://t.co/8oejzPJfwx">pic.twitter.com/8oejzPJfwx</a></p>— Gruppo Senato Forza Italia Berlusconi Presidente (@GruppoFISenato) 
+       <a href="https://twitter.com/GruppoFISenato/status/1127972584887287810?ref_src=twsrc%5Etfw">May 13, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1126155126912233472</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1126154670873903109</td> 
+     <td class="tg-0pky">2019-05-08 18:01:19.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Bisogna mettere le imprese nelle condizioni di affrontare la sfida <a href="https://twitter.com/hashtag/digitale?src=hash&amp;ref_src=twsrc%5Etfw">#digitale</a> con incentivi fiscali e infrastrutture digitali.<a href="https://twitter.com/hashtag/ConfcommercioIncontra?src=hash&amp;ref_src=twsrc%5Etfw">#ConfcommercioIncontra</a> <a href="https://t.co/yJkkCuggWA">pic.twitter.com/yJkkCuggWA</a></p>— Antonio Tajani (@Antonio_Tajani) 
+       <a href="https://twitter.com/Antonio_Tajani/status/1126154670873903109?ref_src=twsrc%5Etfw">May 8, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1121838866518945793</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1121810596209594368</td> 
+     <td class="tg-0pky">2019-04-26 20:10:03.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Usa e fai conoscere <a href="https://t.co/u4Mb9ADNcF">https://t.co/u4Mb9ADNcF</a>, il gazebo digitale della nostra campagna elettorale. Grafiche, video, programma, tanti contenuti per far conoscere le nostre proposte e aprire gli occhi a tutti gli italiani. Diventa protagonista della campagna delle <a href="https://twitter.com/hashtag/ElezioniEuropee?src=hash&amp;ref_src=twsrc%5Etfw">#ElezioniEuropee</a>! <a href="https://t.co/EuoVrnhT4h">pic.twitter.com/EuoVrnhT4h</a></p>— Generazione Azzurra (@iberlusconiani) 
+       <a href="https://twitter.com/iberlusconiani/status/1121810596209594368?ref_src=twsrc%5Etfw">April 26, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1113462497011544065</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-03 17:25:21.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Tutti sappiamo che società e soci sono persone giuridiche diverse. L’identità digitale è una costruzione giuridica di questo tipo.<a href="https://t.co/sAAKQfuk5R">https://t.co/sAAKQfuk5R</a></p>— Movimento 5 Stelle (@Mov5Stelle) 
+       <a href="https://twitter.com/Mov5Stelle/status/1113462497011544065?ref_src=twsrc%5Etfw">April 3, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1128605760689197056</td> 
+     <td class="tg-phtq">europaverde_it</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-15 12:19:16.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Stasera, <a href="https://twitter.com/hashtag/15maggio?src=hash&amp;ref_src=twsrc%5Etfw">#15maggio</a>, su <a href="https://twitter.com/teleambiente?ref_src=twsrc%5Etfw">@teleambiente</a> (canale 78 del digitale terrestre in <a href="https://twitter.com/hashtag/Lazio?src=hash&amp;ref_src=twsrc%5Etfw">#Lazio</a> e <a href="https://twitter.com/hashtag/Umbria?src=hash&amp;ref_src=twsrc%5Etfw">#Umbria</a>) con <a href="https://twitter.com/A_LisaCorrado?ref_src=twsrc%5Etfw">@A_LisaCorrado</a>, capolista di <a href="https://twitter.com/hashtag/EuropaVerde?src=hash&amp;ref_src=twsrc%5Etfw">#EuropaVerde</a> nella circoscrizione Italia Centrale.<br><br>Diretta streaming su <a href="https://t.co/iiff3QLKRn">https://t.co/iiff3QLKRn</a>! <a href="https://twitter.com/hashtag/Europee2019?src=hash&amp;ref_src=twsrc%5Etfw">#Europee2019</a> <a href="https://twitter.com/hashtag/ToccaaNoi?src=hash&amp;ref_src=twsrc%5Etfw">#ToccaaNoi</a> <a href="https://t.co/sjYPMHydzC">pic.twitter.com/sjYPMHydzC</a></p>— Europa Verde (@europaverde_it) 
+       <a href="https://twitter.com/europaverde_it/status/1128605760689197056?ref_src=twsrc%5Etfw">May 15, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1121836535333171201</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1121804782958723072</td> 
+     <td class="tg-0pky">2019-04-26 20:00:47.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr"><a href="https://t.co/q9QW3VAty3">https://t.co/q9QW3VAty3</a> è il nostro gazebo digitale. Grafiche, video, programma, tanti contenuti per far conoscere le nostre proposte e aprire gli occhi a tutti gli italiani. Puoi registrarti ed essere protagonista della campagna elettorale per le <a href="https://twitter.com/hashtag/ElezioniEuropee?src=hash&amp;ref_src=twsrc%5Etfw">#ElezioniEuropee</a> <a href="https://twitter.com/hashtag/26aprile?src=hash&amp;ref_src=twsrc%5Etfw">#26aprile</a> <a href="https://t.co/X0Ewtinss4">pic.twitter.com/X0Ewtinss4</a></p>— Antonio Palmieri (@antoniopalmieri) 
+       <a href="https://twitter.com/antoniopalmieri/status/1121804782958723072?ref_src=twsrc%5Etfw">April 26, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1121794375040684032</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-26 17:13:15.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Usa e fai conoscere <a href="https://t.co/cSnLutCytp">https://t.co/cSnLutCytp</a>, il gazebo digitale della nostra campagna elettorale. Grafiche, video, programma, tanti contenuti per far conoscere le nostre proposte e aprire gli occhi a tutti gli italiani. Diventa protagonista della campagna delle <a href="https://twitter.com/hashtag/ElezioniEuropee?src=hash&amp;ref_src=twsrc%5Etfw">#ElezioniEuropee</a>! <a href="https://t.co/LgwcjTiJXv">pic.twitter.com/LgwcjTiJXv</a></p>— Forza Italia (@forza_italia) 
+       <a href="https://twitter.com/forza_italia/status/1121794375040684032?ref_src=twsrc%5Etfw">April 26, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1128225414017581057</td> 
+     <td class="tg-phtq">partitopirata</td> 
+     <td class="tg-0pky">1128223129103417344</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-14 11:07:54.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-conversation="none" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Un'educazione digitale è alla base di future generazioni consapevoli dei mezzi che stanno utilizzando. Inoltre bisognerebbe cercare di formare anche le generazioni meno giovani, poiché i social network e altre tecnologie sono recenti. <a href="https://t.co/2qFwZLL2fU">pic.twitter.com/2qFwZLL2fU</a></p>— Partito Pirata (@partitopirata) 
+       <a href="https://twitter.com/partitopirata/status/1128225414017581057?ref_src=twsrc%5Etfw">May 14, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1108419399428554753</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1108390239221874688</td> 
+     <td class="tg-0pky">2019-03-20 18:25:52.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr"><a href="https://twitter.com/hashtag/GIUSTIZIA?src=hash&amp;ref_src=twsrc%5Etfw">#GIUSTIZIA</a> e cittadinanza digitale. Nuovi paradigmi per il futuro<br><br>Parleremo di questo e molto altro con Davide Casaleggio, alla settima tappa del <a href="https://twitter.com/hashtag/Rousseau?src=hash&amp;ref_src=twsrc%5Etfw">#Rousseau</a> CityLab di Genova il 30 e 31 marzo in Piazza Matteotti. Vi aspettiamo!<br>INFO: <a href="https://t.co/qIBP8uy1El">https://t.co/qIBP8uy1El</a> <a href="https://t.co/1Tnmf0rHKn">pic.twitter.com/1Tnmf0rHKn</a></p>— Associazione Rousseau (@Rousseau_OS) 
+       <a href="https://twitter.com/Rousseau_OS/status/1108390239221874688?ref_src=twsrc%5Etfw">March 20, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1126124910873595904</td> 
+     <td class="tg-phtq">SiamoEuropei</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1126109499964547072</td> 
+     <td class="tg-0pky">2019-05-08 16:01:15.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Ambienti come questi non possono che ispirarmi idee da proporre e sviluppare. All'<a href="https://twitter.com/_OpenCampus?ref_src=twsrc%5Etfw">@_OpenCampus</a> si coltiva il <a href="https://twitter.com/hashtag/digitale?src=hash&amp;ref_src=twsrc%5Etfw">#digitale</a> avvicinando <a href="https://twitter.com/hashtag/startup?src=hash&amp;ref_src=twsrc%5Etfw">#startup</a>, aziende e professionisti. <a href="https://twitter.com/hashtag/innovazione?src=hash&amp;ref_src=twsrc%5Etfw">#innovazione</a> <a href="https://twitter.com/hashtag/sviluppo?src=hash&amp;ref_src=twsrc%5Etfw">#sviluppo</a> <a href="https://twitter.com/hashtag/sardegna?src=hash&amp;ref_src=twsrc%5Etfw">#sardegna</a> <a href="https://twitter.com/hashtag/cagliari?src=hash&amp;ref_src=twsrc%5Etfw">#cagliari</a> <a href="https://t.co/ZXr5GTjV10">pic.twitter.com/ZXr5GTjV10</a></p>— Virginia Puzzolo (@virginiapuzzolo) 
+       <a href="https://twitter.com/virginiapuzzolo/status/1126109499964547072?ref_src=twsrc%5Etfw">May 8, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1116611730077929474</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1116611065301725185</td> 
+     <td class="tg-0pky">2019-04-12 09:59:16.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">È fondamentale realizzare un progetto per sviluppare il sistema digitale in tutta la macchina amministrativa, si può fare anche con i fondi europei non utilizzati dalle regioni. 💻 Intervengo alla relazione annuale sulla pubblica amministrazione. 👩‍💻 <a href="https://t.co/7NLGWzNjEc">pic.twitter.com/7NLGWzNjEc</a></p>— Antonio Tajani (@Antonio_Tajani) 
+       <a href="https://twitter.com/Antonio_Tajani/status/1116611065301725185?ref_src=twsrc%5Etfw">April 12, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1110848539268132864</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1110669384035561478</td> 
+     <td class="tg-0pky">2019-03-27 11:18:24.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">La direttiva proposta sul <a href="https://twitter.com/hashtag/Copyright?src=hash&amp;ref_src=twsrc%5Etfw">#Copyright</a> per il mercato digitale è stata approvata dalla plenaria del Parlamento europeo. <a href="https://t.co/TVFzQfUA2s">pic.twitter.com/TVFzQfUA2s</a></p>— Patrizia Marrocco (@MarroccoPatty) 
+       <a href="https://twitter.com/MarroccoPatty/status/1110669384035561478?ref_src=twsrc%5Etfw">March 26, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1110816858691829760</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1110815538949824517</td> 
+     <td class="tg-0pky">2019-03-27 09:12:31.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">La direttiva europea sul <a href="https://twitter.com/hashtag/copyright?src=hash&amp;ref_src=twsrc%5Etfw">#copyright</a> © mette fine all'attuale Far West digitale. Leggi il mio commento su <a href="https://twitter.com/ilgiornale?ref_src=twsrc%5Etfw">@ilgiornale</a> <a href="https://twitter.com/hashtag/nofakenews?src=hash&amp;ref_src=twsrc%5Etfw">#nofakenews</a> <a href="https://twitter.com/hashtag/dirittodautore?src=hash&amp;ref_src=twsrc%5Etfw">#dirittodautore</a> <a href="https://twitter.com/hashtag/DirettivaCopyright?src=hash&amp;ref_src=twsrc%5Etfw">#DirettivaCopyright</a> ⤵️<a href="https://t.co/GBVtoLhAfe">https://t.co/GBVtoLhAfe</a></p>— Antonio Tajani (@Antonio_Tajani) 
+       <a href="https://twitter.com/Antonio_Tajani/status/1110815538949824517?ref_src=twsrc%5Etfw">March 27, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1123524979327418368</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1123523679751680000</td> 
+     <td class="tg-0pky">2019-05-01 11:50:03.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il lavoro, la sua qualità, la parità di genere, retribuzioni più dignitose, sicurezza, sfida digitale. Alla radice del nostro impegno politico <a href="https://twitter.com/hashtag/1Maggio?src=hash&amp;ref_src=twsrc%5Etfw">#1Maggio</a></p>— Paolo Gentiloni (@PaoloGentiloni) 
+       <a href="https://twitter.com/PaoloGentiloni/status/1123523679751680000?ref_src=twsrc%5Etfw">May 1, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1109040850607267840</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1108677129019912193</td> 
+     <td class="tg-0pky">2019-03-22 11:35:18.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr"><a href="https://twitter.com/hashtag/GIUSTIZIA?src=hash&amp;ref_src=twsrc%5Etfw">#GIUSTIZIA</a> e cittadinanza digitale. Nuovi paradigmi per il futuro<br><br>Il 30 e 31 marzo, il Presidente dell'<a href="https://twitter.com/Rousseau_OS?ref_src=twsrc%5Etfw">@Rousseau_OS</a>, Davide Casaleggio, interverrà al <a href="https://twitter.com/hashtag/Rousseau?src=hash&amp;ref_src=twsrc%5Etfw">#Rousseau</a> CityLab di Genova.<br>Sarà un evento con moltissimi ospiti, non mancate!<br>INFO: <a href="https://t.co/qIBP8uy1El">https://t.co/qIBP8uy1El</a> <a href="https://t.co/lYkOu1Q6MV">pic.twitter.com/lYkOu1Q6MV</a></p>— Associazione Rousseau (@Rousseau_OS) 
+       <a href="https://twitter.com/Rousseau_OS/status/1108677129019912193?ref_src=twsrc%5Etfw">March 21, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1098529013306458112</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-02-21 11:25:01.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">L’ospedale rappresenta oggi l’anello più esposto della rete che raccoglie e conserva in forma digitale i nostri dati personali e informazioni sensibili sulla nostra salute. <br><br>Continua a leggere ⤵️<a href="https://t.co/6jtVHRk7uE">https://t.co/6jtVHRk7uE</a></p>— Movimento 5 Stelle (@Mov5Stelle) 
+       <a href="https://twitter.com/Mov5Stelle/status/1098529013306458112?ref_src=twsrc%5Etfw">February 21, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1100404543035035649</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1100359659213545472</td> 
+     <td class="tg-0pky">2019-02-26 15:37:42.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Colmiamo il gap digitale del nostro Paese: abbiamo stanziato 45 milioni per dotare tutti i Comuni, specialmente i più piccoli, di connessioni wi-fi gratuite. Di corsa verso la creazione di una vera <a href="https://twitter.com/hashtag/SmartNation?src=hash&amp;ref_src=twsrc%5Etfw">#SmartNation</a></p>— lucia Scanu m5s (@luciasar) 
+       <a href="https://twitter.com/luciasar/status/1100359659213545472?ref_src=twsrc%5Etfw">February 26, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1100376158779129856</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1100361078121394178</td> 
+     <td class="tg-0pky">2019-02-26 13:44:54.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Colmiamo il gap digitale del nostro Paese: abbiamo rimodulato 45 milioni per dotare tutti i Comuni, specialmente i più piccoli, di connessioni wi-fi gratuite. Di corsa verso la creazione di una vera <a href="https://twitter.com/hashtag/SmartNation?src=hash&amp;ref_src=twsrc%5Etfw">#SmartNation</a><a href="https://t.co/cwDTMIkLCF">https://t.co/cwDTMIkLCF</a> <a href="https://t.co/xr96FlyELt">pic.twitter.com/xr96FlyELt</a></p>— Mirella Liuzzi (@mirellaliuzzi) 
+       <a href="https://twitter.com/mirellaliuzzi/status/1100361078121394178?ref_src=twsrc%5Etfw">February 26, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1083091037139161088</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-01-09 21:00:00.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il Diritto sanitario digitale è la possibilità per il cittadino di poter accedere – ovunque si trovi – ai propri dati sanitari, inseriti da lui stesso ma anche dagli altri attori della sanità pubblica e privata. <br><br>Ecco di cosa si tratta ⬇<a href="https://t.co/O3lk1Dz7Vx">https://t.co/O3lk1Dz7Vx</a></p>— Movimento 5 Stelle (@Mov5Stelle) 
+       <a href="https://twitter.com/Mov5Stelle/status/1083091037139161088?ref_src=twsrc%5Etfw">January 9, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1114838316879364098</td> 
+     <td class="tg-phtq">Piu_Europa</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-07 12:32:22.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">A <a href="https://twitter.com/hashtag/Firenze?src=hash&amp;ref_src=twsrc%5Etfw">#Firenze</a> stiamo costruendo il programma per il futuro. Questo è il tavolo di <a href="https://twitter.com/hashtag/EUreka?src=hash&amp;ref_src=twsrc%5Etfw">#EUreka</a> su Europa digitale, industria, innovazione 4.0 <a href="https://twitter.com/hashtag/FacciamoPiuEuropa?src=hash&amp;ref_src=twsrc%5Etfw">#FacciamoPiuEuropa</a> <a href="https://t.co/poMTkwrtXf">pic.twitter.com/poMTkwrtXf</a></p>— Più Europa (@Piu_Europa) 
+       <a href="https://twitter.com/Piu_Europa/status/1114838316879364098?ref_src=twsrc%5Etfw">April 7, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1101793468190461952</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1101792466318036998</td> 
+     <td class="tg-0pky">2019-03-02 11:36:47.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il CityLab, il tour di <a href="https://twitter.com/hashtag/Rousseau?src=hash&amp;ref_src=twsrc%5Etfw">#Rousseau</a>, è a Bari! Insieme a tanti ospiti parleremo di <a href="https://twitter.com/hashtag/CULTURA?src=hash&amp;ref_src=twsrc%5Etfw">#CULTURA</a> e creatività digitale.<br>Seguiteci in diretta ▶️ <a href="https://t.co/u5fy05f9EJ">https://t.co/u5fy05f9EJ</a> <a href="https://t.co/wxv6jtcgOX">pic.twitter.com/wxv6jtcgOX</a></p>— Associazione Rousseau (@Rousseau_OS) 
+       <a href="https://twitter.com/Rousseau_OS/status/1101792466318036998?ref_src=twsrc%5Etfw">March 2, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1101785920490082304</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1101785778491936769</td> 
+     <td class="tg-0pky">2019-03-02 11:06:48.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il CityLab, il tour di <a href="https://twitter.com/hashtag/Rousseau?src=hash&amp;ref_src=twsrc%5Etfw">#Rousseau</a>, è a Bari! Insieme a tanti ospiti parleremo di <a href="https://twitter.com/hashtag/CULTURA?src=hash&amp;ref_src=twsrc%5Etfw">#CULTURA</a> e creatività digitale.<br>Seguiteci in diretta ▶️ <a href="https://t.co/d94yWMePhJ">https://t.co/d94yWMePhJ</a></p>— Associazione Rousseau (@Rousseau_OS) 
+       <a href="https://twitter.com/Rousseau_OS/status/1101785778491936769?ref_src=twsrc%5Etfw">March 2, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1100395924336140291</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1100392384700010496</td> 
+     <td class="tg-0pky">2019-02-26 15:03:27.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Colmiamo il gap digitale del nostro Paese: abbiamo stanziato 45 milioni per dotare tutti i Comuni, specialmente i più piccoli, di connessioni wi-fi gratuite. Di corsa verso la creazione di una vera <a href="https://twitter.com/hashtag/SmartNation?src=hash&amp;ref_src=twsrc%5Etfw">#SmartNation</a> <a href="https://t.co/qrjzp9Qf5p">pic.twitter.com/qrjzp9Qf5p</a></p>— Giorgio Lovecchio (@Giorgiolovecc) 
+       <a href="https://twitter.com/Giorgiolovecc/status/1100392384700010496?ref_src=twsrc%5Etfw">February 26, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1111936644297486336</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1111933587421626368</td> 
+     <td class="tg-0pky">2019-03-30 11:22:09.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Fai conoscere a tutti il nuovo gazebo digitale di <a href="https://twitter.com/hashtag/ForzaItalia?src=hash&amp;ref_src=twsrc%5Etfw">#ForzaItalia</a>. Per dare la sveglia e far capire agli <a href="https://twitter.com/hashtag/italiani?src=hash&amp;ref_src=twsrc%5Etfw">#italiani</a> l'importanza delle <a href="https://twitter.com/hashtag/ElezioniEuropee?src=hash&amp;ref_src=twsrc%5Etfw">#ElezioniEuropee</a>. <a href="https://twitter.com/hashtag/ItaliaSvegliati?src=hash&amp;ref_src=twsrc%5Etfw">#ItaliaSvegliati</a> <a href="https://twitter.com/hashtag/30marzo?src=hash&amp;ref_src=twsrc%5Etfw">#30marzo</a> <a href="https://t.co/htak4o49Y5">pic.twitter.com/htak4o49Y5</a></p>— Giusi Bartolozzi (@giusibartolozzi) 
+       <a href="https://twitter.com/giusibartolozzi/status/1111933587421626368?ref_src=twsrc%5Etfw">March 30, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1093222799362150403</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-02-06 20:00:01.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Si tratta di un meta-diritto che non riguarda un singolo aspetto della cittadinanza digitale, ma qualcosa di più profondo: riguarda il centro culturale della società che stiamo costruendo.<a href="https://t.co/IYEAI0kJTi">https://t.co/IYEAI0kJTi</a></p>— Movimento 5 Stelle (@Mov5Stelle) 
+       <a href="https://twitter.com/Mov5Stelle/status/1093222799362150403?ref_src=twsrc%5Etfw">February 6, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1080459603895296000</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-01-02 14:43:38.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">"La cittadinanza digitale è un nuovo tipo di cittadinanza. Non ha niente a che vedere con la cittadinanza com’è stata elaborata, pensata e vissuta all’interno della storia dell’Occidente".<br><br>Leggi l'articolo di Massimo Di Felice!<a href="https://t.co/yayr8fBFsa">https://t.co/yayr8fBFsa</a></p>— Movimento 5 Stelle (@Mov5Stelle) 
+       <a href="https://twitter.com/Mov5Stelle/status/1080459603895296000?ref_src=twsrc%5Etfw">January 2, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1118555356517543942</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1118555278776180736</td> 
+     <td class="tg-0pky">2019-04-17 18:42:33.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Oggi ho firmato la nuova riforma sul <a href="https://twitter.com/hashtag/copyright?src=hash&amp;ref_src=twsrc%5Etfw">#copyright</a> che dice stop al Far West digitale.<br><br>Difendiamo 12 milioni di posti di lavoro delle industrie culturali e creative Europee e il diritto di cantanti, autori e musicisti a essere pagati per il loro lavoro.<a href="https://twitter.com/hashtag/direttivacopyright?src=hash&amp;ref_src=twsrc%5Etfw">#direttivacopyright</a> <a href="https://t.co/NeSzUSjujO">pic.twitter.com/NeSzUSjujO</a></p>— Antonio Tajani (@Antonio_Tajani) 
+       <a href="https://twitter.com/Antonio_Tajani/status/1118555278776180736?ref_src=twsrc%5Etfw">April 17, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1124357139659730946</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-03 18:56:46.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr"><a href="https://twitter.com/Antonio_Tajani?ref_src=twsrc%5Etfw">@Antonio_Tajani</a>: Se non ci sono infrastrutture, anche digitali, significa tagliare fuori dalla competitività intere aree italiane. <a href="https://twitter.com/hashtag/PerContareInEuropa?src=hash&amp;ref_src=twsrc%5Etfw">#PerContareInEuropa</a></p>— Forza Italia (@forza_italia) 
+       <a href="https://twitter.com/forza_italia/status/1124357139659730946?ref_src=twsrc%5Etfw">May 3, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1110129262466617345</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1110114694164082688</td> 
+     <td class="tg-0pky">2019-03-25 11:40:16.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Oggi su Tef, che trasmette sul digitale terrestre e sul satellite, alle 14:30 va in onda Time out, la trasmissione di Marco Brunacci con il quale ho parlato di politica nazionale e locale. Vi aspetto! <a href="https://t.co/L6O08WR9zJ">pic.twitter.com/L6O08WR9zJ</a></p>— Fiammetta Modena (@FiammettaModena) 
+       <a href="https://twitter.com/FiammettaModena/status/1110114694164082688?ref_src=twsrc%5Etfw">March 25, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1117861730024067073</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1117850860531269633</td> 
+     <td class="tg-0pky">2019-04-15 20:46:19.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il <a href="https://twitter.com/hashtag/governo?src=hash&amp;ref_src=twsrc%5Etfw">#governo</a> é a favore delle fake news e del far west digitale e contro il diritto di autori e produttori di contenuti italiani di vedersi riconosciuto il legittimo compenso per il loro lavoro.<a href="https://twitter.com/hashtag/copyright?src=hash&amp;ref_src=twsrc%5Etfw">#copyright</a> <a href="https://t.co/1Zx0kU6fPt">pic.twitter.com/1Zx0kU6fPt</a></p>— Generazione Azzurra (@iberlusconiani) 
+       <a href="https://twitter.com/iberlusconiani/status/1117850860531269633?ref_src=twsrc%5Etfw">April 15, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1109391097766334465</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1109115020342755328</td> 
+     <td class="tg-0pky">2019-03-23 10:47:03.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr"><a href="https://twitter.com/hashtag/GIUSTIZIA?src=hash&amp;ref_src=twsrc%5Etfw">#GIUSTIZIA</a>. Un mondo senza mafie. Nuove frontiere e scenari digitali nella lotta al crimine organizzato<a href="https://twitter.com/NicolaGratteri?ref_src=twsrc%5Etfw">@NicolaGratteri</a> vi aspetta il 30 e 31 marzo insieme a molti altri ospiti in Piazza Matteotti per la settima tappa del <a href="https://twitter.com/hashtag/Rousseau?src=hash&amp;ref_src=twsrc%5Etfw">#Rousseau</a> CityLab di Genova<br>INFO: <a href="https://t.co/qIBP8uy1El">https://t.co/qIBP8uy1El</a> <a href="https://t.co/PmYEj2TYf6">pic.twitter.com/PmYEj2TYf6</a></p>— Associazione Rousseau (@Rousseau_OS) 
+       <a href="https://twitter.com/Rousseau_OS/status/1109115020342755328?ref_src=twsrc%5Etfw">March 22, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1127900215715954688</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1127899253874073600</td> 
+     <td class="tg-0pky">2019-05-13 13:35:41.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Ecco l’Europa che vogliamo!<br>Grazie al codice <a href="https://twitter.com/hashtag/UE?src=hash&amp;ref_src=twsrc%5Etfw">#UE</a> di autoregolamentazione per piattaforme digitali, Facebook ha chiuso 23 pagine italiane, con oltre 2,4 mln di follower, che diffondevano odio e fake news. Casualmente la metà sostenevano Lega e M5S.<br>Capito perché attaccano l'<a href="https://twitter.com/hashtag/UE?src=hash&amp;ref_src=twsrc%5Etfw">#UE</a>? <a href="https://t.co/m5w3wK9RxO">pic.twitter.com/m5w3wK9RxO</a></p>— Piero De Luca (@Piero_De_Luca) 
+       <a href="https://twitter.com/Piero_De_Luca/status/1127899253874073600?ref_src=twsrc%5Etfw">May 13, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1102483786678321152</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1102481806375505921</td> 
+     <td class="tg-0pky">2019-03-04 09:19:52.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Questa mattina a Milano, l’incontro sul ruolo femminile nelle professioni digitali. Presenteremo l’instant book con le riflessioni su “Women &amp; Digital Jobs in Europe” 2018, che ho organizzato a Bruxelles.<a href="https://twitter.com/hashtag/womenempowerment?src=hash&amp;ref_src=twsrc%5Etfw">#womenempowerment</a> <a href="https://twitter.com/hashtag/womenintech?src=hash&amp;ref_src=twsrc%5Etfw">#womenintech</a> <br><br>➡️ <a href="https://t.co/pmG7ebPTpc">https://t.co/pmG7ebPTpc</a> <a href="https://t.co/hIMzrf3HJg">pic.twitter.com/hIMzrf3HJg</a></p>— Patrizia Toia (@toiapatrizia) 
+       <a href="https://twitter.com/toiapatrizia/status/1102481806375505921?ref_src=twsrc%5Etfw">March 4, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1117795606079184897</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-04-15 16:23:34.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il <a href="https://twitter.com/hashtag/governo?src=hash&amp;ref_src=twsrc%5Etfw">#governo</a> é a favore delle fake news e del far west digitale e contro il diritto di autori e produttori di contenuti italiani di vedersi riconosciuto il legittimo compenso per il loro lavoro.<a href="https://twitter.com/hashtag/copyright?src=hash&amp;ref_src=twsrc%5Etfw">#copyright</a> <a href="https://t.co/bRRi2eWMrr">pic.twitter.com/bRRi2eWMrr</a></p>— Forza Italia (@forza_italia) 
+       <a href="https://twitter.com/forza_italia/status/1117795606079184897?ref_src=twsrc%5Etfw">April 15, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1129411319365554178</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1129351098639224833</td> 
+     <td class="tg-0pky">2019-05-17 17:40:16.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Oggi a <a href="https://twitter.com/hashtag/Firenze?src=hash&amp;ref_src=twsrc%5Etfw">#Firenze</a> con il Presidente <a href="https://twitter.com/Antonio_Tajani?ref_src=twsrc%5Etfw">@Antonio_Tajani</a> per parlare di riforme, infrastrutture digitali, Tav, 5G e tutela del made in Italy. Con <a href="https://twitter.com/forza_italia?ref_src=twsrc%5Etfw">@forza_italia</a> per un'Italia protagonista in Europa e per liberare i comuni come Firenze dal malgoverno della sinistra. <a href="https://twitter.com/hashtag/europee2019?src=hash&amp;ref_src=twsrc%5Etfw">#europee2019</a> <a href="https://t.co/g1qSr3wNOt">pic.twitter.com/g1qSr3wNOt</a></p>— Deborah Bergamini (@DeborahBergamin) 
+       <a href="https://twitter.com/DeborahBergamin/status/1129351098639224833?ref_src=twsrc%5Etfw">May 17, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1124738506843197447</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1124736934415413249</td> 
+     <td class="tg-0pky">2019-05-04 20:12:11.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Le infrastrutture digitali sono indispensabili per far rimanere i giovani nelle aree interne, nelle piccole città che difendono le nostre tradizioni e i nostri valori. Sono a Sgurgola, città della Ciociaria, dove vengo da quando sono bambino. <a href="https://t.co/Pp1nJYRa3Q">pic.twitter.com/Pp1nJYRa3Q</a></p>— Antonio Tajani (@Antonio_Tajani) 
+       <a href="https://twitter.com/Antonio_Tajani/status/1124736934415413249?ref_src=twsrc%5Etfw">May 4, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1123997385712181248</td> 
+     <td class="tg-phtq">forza_italia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1123997344377331713</td> 
+     <td class="tg-0pky">2019-05-02 19:07:14.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Senza infrastrutture digitali i nostri ragazzi saranno costretti ad abbandonare le aree interne del nostro Paese 🇮🇹 <br>Dobbiamo mettere i giovani nella condizione di poter realizzare i propri sogni e progetti ! <a href="https://t.co/QHpZefhLNI">pic.twitter.com/QHpZefhLNI</a></p>— Antonio Tajani (@Antonio_Tajani) 
+       <a href="https://twitter.com/Antonio_Tajani/status/1123997344377331713?ref_src=twsrc%5Etfw">May 2, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1113122023935500289</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1113120506331443201</td> 
+     <td class="tg-0pky">2019-04-02 18:52:25.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Dalle impronte digitali per l’ingresso a <a href="https://twitter.com/hashtag/scuola?src=hash&amp;ref_src=twsrc%5Etfw">#scuola</a> fino al superamento dell’obbligo vaccinale, passando per i fondi non spesi per l'<a href="https://twitter.com/hashtag/edilizia?src=hash&amp;ref_src=twsrc%5Etfw">#edilizia</a> scolastica. Lega e 5 Stelle attaccano l’istruzione perché temono la <a href="https://twitter.com/hashtag/cultura?src=hash&amp;ref_src=twsrc%5Etfw">#cultura</a>, l’educazione, la <a href="https://twitter.com/hashtag/libert%C3%A0?src=hash&amp;ref_src=twsrc%5Etfw">#libertà</a> di pensiero.<a href="https://twitter.com/AnnaAscani?ref_src=twsrc%5Etfw">@AnnaAscani</a> <a href="https://twitter.com/pdnetwork?ref_src=twsrc%5Etfw">@pdnetwork</a> <a href="https://t.co/ymVtn4ozQN">pic.twitter.com/ymVtn4ozQN</a></p>— Deputati PD (@Deputatipd) 
+       <a href="https://twitter.com/Deputatipd/status/1113120506331443201?ref_src=twsrc%5Etfw">April 2, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1109040863211065344</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1108752627796455424</td> 
+     <td class="tg-0pky">2019-03-22 11:35:21.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr"><a href="https://twitter.com/hashtag/GIUSTIZIA?src=hash&amp;ref_src=twsrc%5Etfw">#GIUSTIZIA</a>: un mondo senza mafie. Nuove frontiere e scenari digitali nella lotta al crimine organizzato <br><br>Tra gli ospiti ci saranno anche <a href="https://twitter.com/NicolaMorra63?ref_src=twsrc%5Etfw">@NicolaMorra63</a> e <a href="https://twitter.com/NicolaGratteri?ref_src=twsrc%5Etfw">@NicolaGratteri</a> alla settima tappa del <a href="https://twitter.com/hashtag/Rousseau?src=hash&amp;ref_src=twsrc%5Etfw">#Rousseau</a> CityLab di Genova. 30-31 marzo, Piazza Matteotti<br>➡ <a href="https://t.co/qIBP8uPD2V">https://t.co/qIBP8uPD2V</a> <a href="https://t.co/KtZ2fENd5a">pic.twitter.com/KtZ2fENd5a</a></p>— Associazione Rousseau (@Rousseau_OS) 
+       <a href="https://twitter.com/Rousseau_OS/status/1108752627796455424?ref_src=twsrc%5Etfw">March 21, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1131579560850591745</td> 
+     <td class="tg-phtq">partitopirata</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-23 17:16:05.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">"Un programma condiviso da 11 diversi paesi europei. Tra le priorità: diritti <a href="https://twitter.com/hashtag/digitali?src=hash&amp;ref_src=twsrc%5Etfw">#digitali</a>, tutela della <a href="https://twitter.com/hashtag/privacy?src=hash&amp;ref_src=twsrc%5Etfw">#privacy</a> e riforma del <a href="https://twitter.com/hashtag/copyright?src=hash&amp;ref_src=twsrc%5Etfw">#copyright</a> ".<br>IL VIDEO: <a href="https://t.co/Kn3zRE4E2w">https://t.co/Kn3zRE4E2w</a><br>Intervista a <a href="https://twitter.com/RosariaTalarico?ref_src=twsrc%5Etfw">@RosariaTalarico</a> al TG3<a href="https://twitter.com/hashtag/pensapirata?src=hash&amp;ref_src=twsrc%5Etfw">#pensapirata</a> <a href="https://twitter.com/hashtag/vivipirata?src=hash&amp;ref_src=twsrc%5Etfw">#vivipirata</a> <a href="https://twitter.com/hashtag/votapirata?src=hash&amp;ref_src=twsrc%5Etfw">#votapirata</a> <a href="https://twitter.com/hashtag/europee2019?src=hash&amp;ref_src=twsrc%5Etfw">#europee2019</a> <a href="https://t.co/snmiIk3bR4">pic.twitter.com/snmiIk3bR4</a></p>— Partito Pirata (@partitopirata) 
+       <a href="https://twitter.com/partitopirata/status/1131579560850591745?ref_src=twsrc%5Etfw">May 23, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1130783774885728256</td> 
+     <td class="tg-phtq">partitopirata</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">0</td> 
+     <td class="tg-0pky">2019-05-21 12:33:55.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Ocse, Italia bocciata in competenze digitali: «Mancano le basi»<br><br>Ecco perché le priorità sono l'educazione e la conoscenza. E noi Pirati lo diciamo da sempre, alle prossime <a href="https://twitter.com/hashtag/Europee2019?src=hash&amp;ref_src=twsrc%5Etfw">#Europee2019</a><a href="https://twitter.com/hashtag/VotaPirata?src=hash&amp;ref_src=twsrc%5Etfw">#VotaPirata</a> 🇪🇺<a href="https://t.co/B6fLNyxFMJ">https://t.co/B6fLNyxFMJ</a></p>— Partito Pirata (@partitopirata) 
+       <a href="https://twitter.com/partitopirata/status/1130783774885728256?ref_src=twsrc%5Etfw">May 21, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1120004917945622528</td> 
+     <td class="tg-phtq">SI_sinistra</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1119966622268252162</td> 
+     <td class="tg-0pky">2019-04-21 18:42:35.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr"><a href="https://twitter.com/hashtag/armati?src=hash&amp;ref_src=twsrc%5Etfw">#armati</a> Luca Morisi, che si autodefinisce digital philosopher 😅 ed è consigliere ministeriale di <a href="https://twitter.com/hashtag/Salvini?src=hash&amp;ref_src=twsrc%5Etfw">#Salvini</a>, lancia un bel messaggio intimidatorio a tutti gli eventuali oppositori. Siamo ancora in <a href="https://twitter.com/hashtag/democrazia?src=hash&amp;ref_src=twsrc%5Etfw">#democrazia</a> ? <a href="https://twitter.com/lumorisi?ref_src=twsrc%5Etfw">@lumorisi</a> <a href="https://twitter.com/matteosalvinimi?ref_src=twsrc%5Etfw">@matteosalvinimi</a> <a href="https://t.co/IyVL29G5rh">pic.twitter.com/IyVL29G5rh</a></p>— Donatella Di Cesare (@DiDonadice) 
+       <a href="https://twitter.com/DiDonadice/status/1119966622268252162?ref_src=twsrc%5Etfw">April 21, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1109040879178842114</td> 
+     <td class="tg-phtq">Mov5Stelle</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1109039517753704448</td> 
+     <td class="tg-0pky">2019-03-22 11:35:25.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr"><a href="https://twitter.com/hashtag/GIUSTIZIA?src=hash&amp;ref_src=twsrc%5Etfw">#GIUSTIZIA</a>. Un mondo senza mafie. Nuove frontiere e scenari digitali nella lotta al crimine organizzato<br><br>Il 30 e 31 marzo, alla settima tappa del <a href="https://twitter.com/hashtag/Rousseau?src=hash&amp;ref_src=twsrc%5Etfw">#Rousseau</a> CityLab di Genova, insieme a moltissimi altri ospiti, interverrà anche <a href="https://twitter.com/NicolaMorra63?ref_src=twsrc%5Etfw">@NicolaMorra63</a>!<br>INFO: <a href="https://t.co/qIBP8uy1El">https://t.co/qIBP8uy1El</a> <a href="https://t.co/WyiIJdbTDX">pic.twitter.com/WyiIJdbTDX</a></p>— Associazione Rousseau (@Rousseau_OS) 
+       <a href="https://twitter.com/Rousseau_OS/status/1109039517753704448?ref_src=twsrc%5Etfw">March 22, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1126072768880152580</td> 
+     <td class="tg-phtq">pdnetwork</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1126042472218615808</td> 
+     <td class="tg-0pky">2019-05-08 12:34:04.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">La promozione della presenza femminile in politica e nei lavori digitali, il mio lavoro in <a href="https://twitter.com/Europarl_IT?ref_src=twsrc%5Etfw">@Europarl_IT</a> in questi anni, le riforme necessarie per un'Europa più dinamica, flessibile e vicina ai cittadini.<br><br>La mia chiacchierata con Il Dialogo di Monza: <a href="https://t.co/tZpeksKBDN">https://t.co/tZpeksKBDN</a></p>— Patrizia Toia (@toiapatrizia) 
+       <a href="https://twitter.com/toiapatrizia/status/1126042472218615808?ref_src=twsrc%5Etfw">May 8, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+   <tbody>
+    <tr> 
+     <td class="tg-0pky">1118557940120735744</td> 
+     <td class="tg-phtq">FratellidItaIia</td> 
+     <td class="tg-0pky">0</td> 
+     <td class="tg-phtq">1118555151873265666</td> 
+     <td class="tg-0pky">2019-04-17 18:52:49.0</td> 
+     <td class="tg-phtq">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-width="220">
+       <p lang="it" dir="ltr">Il Governo pensa a spendere soldi per le impronte digitali ai Dirigenti Scolastici e non per la manutenzione e la messa in sicurezza delle scuole. <a href="https://t.co/SMwt6ihdbM">https://t.co/SMwt6ihdbM</a></p>— Antonio Iannone (@AntonioIannone) 
+       <a href="https://twitter.com/AntonioIannone/status/1118555151873265666?ref_src=twsrc%5Etfw">April 17, 2019</a>
+      </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </td> 
+    </tr>
+   </tbody>
+  </table> 
+  <p>Sorting function from <a target="_blank" href="https://stackoverflow.com/a/49041392">here</a></p>  
+ </body>
+</html>
