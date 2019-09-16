@@ -9,6 +9,7 @@
 /src/main/resources/ds/backup.sql
 /src/main/resources/ds/bonino.json
 /src/main/resources/ds/salerno.json
+/src/main/resources/ds/properties.json
 
 /target/classes/ds/*
 !/target/classes/ds/web
