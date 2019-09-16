@@ -1,0 +1,24 @@
+{
+  "conf0": {
+    "oack": "AAAAAA",
+    "oacs": "AAAAAA",
+    "oaat": "AAAAAA",
+    "oats": "AAAAAA"
+  },
+  "conf1": {
+    "oack": "AAAAAA",
+    "oacs": "AAAAAA",
+    "oaat": "AAAAAA",
+    "oats": "AAAAAA"
+  },
+  "postgres_db": {
+    "dbURL": "jdbc:postgresql://localhost:5432/<database>",
+    "dbUser": "<username>",
+    "dbPsw": "<password>"
+  },
+  "maria_db": {
+    "dbURL": "jdbc:mariadb://localhost/<database>",
+    "dbUser": "<username>",
+    "dbPsw": "<password>"
+  }
+}
